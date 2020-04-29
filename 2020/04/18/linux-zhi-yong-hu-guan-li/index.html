@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="just do it" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -486,36 +487,36 @@
 <h4 id="图示："><a href="#图示：" class="headerlink" title="图示："></a>图示：</h4><img src="/images/linux/用户管理/01-添加用户.jpg" align="left">
 
 <h3 id="给用户修改密码"><a href="#给用户修改密码" class="headerlink" title="给用户修改密码"></a>给用户修改密码</h3><p><strong>语法：</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">passwd</span> 用户名</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">passwd</span> 用户名</span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="图示：-1"><a href="#图示：-1" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/02-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81.jpg" alt></p>
-<h3 id="2-删除用户"><a href="#2-删除用户" class="headerlink" title="2-删除用户"></a>2-删除用户</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">userdel</span>	用户名</span><br></pre></td></tr></table></figure>
+<h4 id="图示：-1"><a href="#图示：-1" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/02-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81.jpg" alt=""></p>
+<h3 id="2-删除用户"><a href="#2-删除用户" class="headerlink" title="2-删除用户"></a>2-删除用户</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">userdel</span>	用户名</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li>删除用户 kobe，但是要保留家目录</li>
 <li>删除用户 Jmaes 以及用户主目录</li>
 </ul>
-<h4 id="图示"><a href="#图示" class="headerlink" title="图示:"></a>图示:</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/03-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7.jpg" alt></p>
+<h4 id="图示"><a href="#图示" class="headerlink" title="图示:"></a>图示:</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/03-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7.jpg" alt=""></p>
 <h3 id="3-切换用户"><a href="#3-切换用户" class="headerlink" title="3-切换用户"></a>3-切换用户</h3><p>在操作 Linux 中，如果当前用户的权限不够，可以通过 su - 指令，切换到高权限用户，比如 root</p>
-<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">su</span>	–切换用户名</span><br></pre></td></tr></table></figure>
+<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">su</span>	–切换用户名</span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="图示：-2"><a href="#图示：-2" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/04-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7.jpg" alt></p>
+<h4 id="图示：-2"><a href="#图示：-2" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/04-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7.jpg" alt=""></p>
 <h3 id="4-用户组"><a href="#4-用户组" class="headerlink" title="4-用户组"></a>4-用户组</h3><p>语法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">添加组: <span class="selector-tag">groupadd</span> 组名</span><br><span class="line">删除组：<span class="selector-tag">groupdel</span> 组名</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">添加组: <span class="selector-tag">groupadd</span> 组名</span><br><span class="line">删除组：<span class="selector-tag">groupdel</span> 组名</span><br></pre></td></tr></tbody></table></figure>
 
 <h4 id="增加用户组"><a href="#增加用户组" class="headerlink" title="增加用户组"></a>增加用户组</h4><p>语法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">useradd</span>	<span class="selector-tag">-g</span> 用户组 用户名</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">useradd</span>	<span class="selector-tag">-g</span> 用户组 用户名</span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="图示：-3"><a href="#图示：-3" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/05-%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.jpg" alt></p>
+<h4 id="图示：-3"><a href="#图示：-3" class="headerlink" title="图示："></a>图示：</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/05-%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.jpg" alt=""></p>
 <h4 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h4><p>语法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">usermod</span>	<span class="selector-tag">-g</span> 用户组 用户名</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">usermod</span>	<span class="selector-tag">-g</span> 用户组 用户名</span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="图示-1"><a href="#图示-1" class="headerlink" title="图示"></a>图示</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/06-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%BB%84.jpg" alt></p>
+<h4 id="图示-1"><a href="#图示-1" class="headerlink" title="图示"></a>图示</h4><p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/06-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%BB%84.jpg" alt=""></p>
 <h4 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h4><p> <strong>1./etc/passwd 文件。</strong></p>
 <blockquote>
 <p>用户（user）的配置文件，记录用户的各种信息。</p>
 </blockquote>
-<p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/07-etcpasswd%E6%96%87%E4%BB%B6.jpg" alt></p>
+<p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/07-etcpasswd%E6%96%87%E4%BB%B6.jpg" alt=""></p>
 <p><strong>2 . /etc/shadow 文件</strong></p>
 <blockquote>
 <p>口令的配置文件</p>
@@ -523,8 +524,26 @@
 <p>每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志。</p>
 <p><strong>3./etc/group 文件</strong></p>
 <p>组(group)的配置文件，记录 Linux 包含的组的信息每行含义：组名:口令:组标识号:组内用户列表</p>
-<p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/08-group%E6%96%87%E4%BB%B6.jpg" alt></p>
-
+<p><img src="/images/linux/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/08-group%E6%96%87%E4%BB%B6.jpg" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -836,6 +855,9 @@ useradd  [选项]  用户名。
                             111112
 1111113
 
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.datase
                         
                     </div>
                     <div class="publish-info">
@@ -1068,13 +1090,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/guardwhy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:hxy1625309592@aliyun.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1084,7 +1106,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625309592" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625309592" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
