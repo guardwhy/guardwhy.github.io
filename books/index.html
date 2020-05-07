@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CPP之异常处理, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="books, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CPP之异常处理 | guardwhy</title>
+    <title>books | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CPP之异常处理</h1>
+                    <h1 class="description center-align post-title">books</h1>
                 </div>
             </div>
         </div>
@@ -437,25 +437,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/C/" class="post-category">
-                                C++
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -464,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-15
+                    2020-05-07
                 </div>
                 
 
@@ -480,141 +467,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="程序的错误分类"><a href="#程序的错误分类" class="headerlink" title="程序的错误分类"></a>程序的错误分类</h3><hr>
-<p><strong>语法错误:</strong></p>
-<blockquote>
-<p>语法错误在编译和链接阶段就能发现，只有 100% 符合语法规则的代码才能生成可执行程序。语法错误是最容发现、最容易定位、最容易排除的错误，程序员最不需要担心的就是这种错误。</p>
-</blockquote>
-<p><strong>逻辑错误:</strong></p>
-<blockquote>
-<p>是说我们编写的代码思路有问题，不能够达到最终的目标，这种错误可以通过调试来解决。</p>
-</blockquote>
-<p><strong>运行时错误:</strong></p>
-<blockquote>
-<p>是指程序在运行期间发生的错误，例如除数为 0、内存分配失败、数组越界、文件不存在等。<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener">C++</a> 异（Exception）机制就是为解决运行时错误而引入的。 </p>
-</blockquote>
-<p><strong>代码示例：</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 定义fun函数</span>
-<span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 条件判断</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">// 输出结果</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a"</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 调用函数</span>
-    <span class="token function">fun</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p><img src="/2019/12/15/cpp-zhi-yi-chang-chu-li/C:%5CUsers%5Clinux%5CPictures%5C1576400892179.png" alt=""></p>
-<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><hr>
-<p> 借助 C++ 异常机制来捕获上面的异常，避免程序崩溃。捕获异常的语法为 ：</p>
-<pre class=" language-cpp"><code class="language-cpp">ry<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 可能抛出异常的语句</span>
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>exceptionType variable<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 处理异常的语句</span>
-<span class="token punctuation">}</span></code></pre>
-<p> <code>try</code>和<code>catch</code>都是 C++ 中的关键字，后跟语句块，不能省略<code>{ }</code>。try 中包含可能会抛出异常的语句，一旦有异常抛出就会被后面的 catch 捕获。从 try 的意思可以看出，它只是“检测”语句块有没有异常，如果没有发生异常，它就“检测”不到。catch 是“抓住”的意思，用来捕获并处理 try 检测到的异常；如果 try 语句块没有检测到异常（没有异常抛出），那么就不会执行 catch 中的语句。</p>
-<hr>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote>
-<p> 抛出对象的时候，要用引用或者指针，不然会拷贝备份出来，即拷贝构造函数。</p>
-</blockquote>
-<p><strong>代码实现:</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span>  </span><span class="token comment" spellcheck="true">//cstdio</span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CPeople</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> b<span class="token punctuation">;</span>
-    <span class="token function">CPeople</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        b <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>a <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">==</span> a<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">throw</span> <span class="token number">123.123</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        a<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">fun2</span><span class="token punctuation">(</span>CPeople<span class="token operator">&amp;</span> c<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span>b <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">15</span> <span class="token operator">==</span> c<span class="token punctuation">.</span>b<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">throw</span> <span class="token operator">&amp;</span>c<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        c<span class="token punctuation">.</span>b<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 创建对象</span>
-    CPeople po<span class="token punctuation">;</span>
-
-    <span class="token keyword">try</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">fun2</span><span class="token punctuation">(</span>po<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>CPeople<span class="token operator">&amp;</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>CPeople<span class="token operator">*</span> d<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        d<span class="token operator">-</span><span class="token operator">></span>b<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">try</span>
-        <span class="token punctuation">{</span>
-            <span class="token function">fun1</span><span class="token punctuation">(</span>b<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> c <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"default "</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -657,7 +510,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/">http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/</a>
+                    <a href="http://yoursite.com/books/index.html">http://yoursite.com/books/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -694,11 +547,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -864,52 +713,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-yun-suan-fu-chong-zai/">
+                <a href="/books/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CPP之运算符重载">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
                         
-                        <span class="card-title">CPP之运算符重载</span>
+                        <span class="card-title">books</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            运算符重载的需求
-C++预定义的运算符，只能用于基本数据类型的运算：整型、实型、字符型、逻辑型.......+、-、*、/、%、^、&amp;、~、!、|、=、&lt;&lt;>>、!=、……
-
-在数学上，两个复数可以直接进行+、-等运算。
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-07
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/C/" class="post-category">
-                                    C++
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            guardwhy
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -917,56 +756,40 @@ C++预定义的运算符，只能用于基本数据类型的运算：整型、�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-nei-lian-han-shu/">
+                <a href="/books/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CPP之内联函数">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
                         
-                        <span class="card-title">CPP之内联函数</span>
+                        <span class="card-title">books</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常规函数执行过程：
-调用时根据函数地址,跳到函数代码空间，执行指令。执行完，再跳转到调用的位置。综合：来回跳跃+记录跳跃的位置==一定的系统开销（资源+时间)。
-内联函数声明:
-
-函数声明要加inline。
-
-函数定义要加inline
-
-注
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/C/" class="post-category">
-                                    C++
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            guardwhy
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
