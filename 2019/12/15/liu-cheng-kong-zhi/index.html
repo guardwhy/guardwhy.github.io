@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CPP之异常处理, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="流程控制, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CPP之异常处理 | guardwhy</title>
+    <title>流程控制 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CPP之异常处理</h1>
+                    <h1 class="description center-align post-title">流程控制</h1>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@
                     <div class="article-tag">
                         
                             <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                                <span class="chip bg-color">C</span>
                             </a>
                         
                     </div>
@@ -452,7 +452,7 @@
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
                             <a href="/categories/C/" class="post-category">
-                                C++
+                                C
                             </a>
                         
                     </div>
@@ -480,138 +480,278 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="程序的错误分类"><a href="#程序的错误分类" class="headerlink" title="程序的错误分类"></a>程序的错误分类</h3><hr>
-<p><strong>语法错误:</strong></p>
-<blockquote>
-<p>语法错误在编译和链接阶段就能发现，只有 100% 符合语法规则的代码才能生成可执行程序。语法错误是最容发现、最容易定位、最容易排除的错误，程序员最不需要担心的就是这种错误。</p>
-</blockquote>
-<p><strong>逻辑错误:</strong></p>
-<blockquote>
-<p>是说我们编写的代码思路有问题，不能够达到最终的目标，这种错误可以通过调试来解决。</p>
-</blockquote>
-<p><strong>运行时错误:</strong></p>
-<blockquote>
-<p>是指程序在运行期间发生的错误，例如除数为 0、内存分配失败、数组越界、文件不存在等。<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener">C++</a> 异（Exception）机制就是为解决运行时错误而引入的。 </p>
-</blockquote>
-<p><strong>代码示例：</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 定义fun函数</span>
-<span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 条件判断</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">// 输出结果</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a"</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                <h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><p><strong>if-else 语句</strong></p>
+<p>一个 <strong>if 语句</strong> 后可跟一个可选的 <strong>else 语句</strong>，else 语句在布尔表达式为 false 时执行。</p>
+<p>语法：</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">if</span><span class="token punctuation">(</span>boolean_expression<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">/* 如果布尔表达式为真将执行的语句 */</span>
 <span class="token punctuation">}</span>
-
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">/* 如果布尔表达式为假将执行的语句 */</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>流程图</strong></p>
+<p>![](D:\学习笔记\C语言\images\2-1 流程图.jpg)</p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 调用函数</span>
-    <span class="token function">fun</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">short</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">short</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 条件判断</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> c <span class="token operator">></span> <span class="token number">0</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a > b\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a &lt;= b\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><img src="/2019/12/15/cpp-zhi-yi-chang-chu-li/C:%5CUsers%5Clinux%5CPictures%5C1576400892179.png" alt=""></p>
-<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><hr>
-<p> 借助 C++ 异常机制来捕获上面的异常，避免程序崩溃。捕获异常的语法为 ：</p>
-<pre class=" language-cpp"><code class="language-cpp">ry<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 可能抛出异常的语句</span>
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>exceptionType variable<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 处理异常的语句</span>
-<span class="token punctuation">}</span></code></pre>
-<p> <code>try</code>和<code>catch</code>都是 C++ 中的关键字，后跟语句块，不能省略<code>{ }</code>。try 中包含可能会抛出异常的语句，一旦有异常抛出就会被后面的 catch 捕获。从 try 的意思可以看出，它只是“检测”语句块有没有异常，如果没有发生异常，它就“检测”不到。catch 是“抓住”的意思，用来捕获并处理 try 检测到的异常；如果 try 语句块没有检测到异常（没有异常抛出），那么就不会执行 catch 中的语句。</p>
-<hr>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote>
-<p> 抛出对象的时候，要用引用或者指针，不然会拷贝备份出来，即拷贝构造函数。</p>
-</blockquote>
-<p><strong>代码实现:</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span>  </span><span class="token comment" spellcheck="true">//cstdio</span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CPeople</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> b<span class="token punctuation">;</span>
-    <span class="token function">CPeople</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        b <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>a <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">==</span> a<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">throw</span> <span class="token number">123.123</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        a<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">fun2</span><span class="token punctuation">(</span>CPeople<span class="token operator">&amp;</span> c<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span>b <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">15</span> <span class="token operator">==</span> c<span class="token punctuation">.</span>b<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">throw</span> <span class="token operator">&amp;</span>c<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        c<span class="token punctuation">.</span>b<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<p><strong>if- else if-else语句</strong></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 创建对象</span>
-    CPeople po<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义且初始化变量</span>
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">try</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">fun2</span><span class="token punctuation">(</span>po<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>CPeople<span class="token operator">&amp;</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入两个数："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span>CPeople<span class="token operator">*</span> d<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// 请输入两个数</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token operator">&amp;</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">></span> y<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        d<span class="token operator">-</span><span class="token operator">></span>b<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The bigger is: %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span> b<span class="token punctuation">)</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> y<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">try</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The bigger is: %d\n"</span><span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The 2 integers is equal: x == y\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><p>一个 <strong>switch</strong> 语句允许测试一个变量等于多个值时的情况。每个值称为一个 case，且被测试的变量会对每个 <strong>switch case</strong> 进行检查。</p>
+<h4 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h4><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510170042.jpg" alt=""></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义num变量</span>
+    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Input a number: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 选择分支</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span> num <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"A\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"B\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"C\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"D\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"E\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Invalid Input\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="循环判断"><a href="#循环判断" class="headerlink" title="循环判断"></a>循环判断</h3><h4 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h4><p>只要给定的条件为真，C 语言中的 <strong>while</strong> 循环语句会重复执行一个目标语句。</p>
+<p>语法</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token function">statement</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="流程图-1"><a href="#流程图-1" class="headerlink" title="流程图"></a>流程图</h5><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/23.png" alt=""></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// 定义sum变量</span>
+    <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义i变量</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        sum <span class="token operator">=</span> sum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+        i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sum = %d\n"</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>编程实战</strong></p>
+<p>求2-100以内的所有质数</p>
+<p>注意：质数只能被1 和 x整除</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义变量i</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 定义标记</span>
+        <span class="token keyword">int</span> flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span><span class="token punctuation">(</span> j <span class="token operator">&lt;</span> i <span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token function">fun1</span><span class="token punctuation">(</span>b<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> i<span class="token operator">%</span>j <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                flag <span class="token operator">=</span> flag <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
 
+            j <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span> flag <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d, "</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">)</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><p><strong>for</strong> 循环的语法：</p>
+<pre class=" language-html"><code class="language-html">for ( init; condition; increment )
+{
+   statement(s);
+}</code></pre>
+<h5 id="流程图-2"><a href="#流程图-2" class="headerlink" title="流程图"></a>流程图</h5><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510170035.jpg" alt=""></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 初始化两个sum的值</span>
+    <span class="token keyword">int</span> esum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> osum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> c <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        osum <span class="token operator">=</span> osum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+        esum <span class="token operator">=</span> esum <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"osum = %d\n"</span><span class="token punctuation">,</span> osum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"esum = %d\n"</span><span class="token punctuation">,</span> esum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="do…while-循环"><a href="#do…while-循环" class="headerlink" title="do…while 循环"></a>do…while 循环</h4><ul>
+<li>在 C 语言中，<strong>do…while</strong> 循环是在循环的尾部检查它的条件。</li>
+<li><strong>do…while</strong> 循环与 while 循环类似，但是 do…while 循环会确保至少执行一次循环。</li>
+</ul>
+<p><strong>语法</strong></p>
+<pre class=" language-html"><code class="language-html">do
+{
+   statement(s);
+
+}while( condition );</code></pre>
+<h5 id="流程图-3"><a href="#流程图-3" class="headerlink" title="流程图"></a>流程图</h5><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510170104.jpg" alt=""></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">/* 局部变量定义 */</span>
+   <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+   <span class="token comment" spellcheck="true">/* do 循环执行 */</span>
+   <span class="token keyword">do</span>
+   <span class="token punctuation">{</span>
+       <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a 的值： %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span> a <span class="token operator">&lt;</span> <span class="token number">20</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p><strong><font color="red">break能够强制结束当前结构，阻止程序向下执行。</font></strong></p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"default "</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        sum <span class="token operator">=</span> sum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span> i <span class="token operator">==</span> <span class="token number">100</span> <span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+        i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sum = %d\n"</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><ul>
+<li>continue立即结束当前循环体，直接进入下一轮条件判断。</li>
+<li><strong><font color="red">continue与break不同，并不会结束整个循环。</font></strong></li>
+</ul>
+<p>代码示例：</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">1000</span><span class="token punctuation">;</span> i<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> i <span class="token operator">%</span> <span class="token number">7</span> <span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        n <span class="token operator">=</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Count: %d\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <script>
@@ -657,7 +797,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/">http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/</a>
+                    <a href="http://yoursite.com/2019/12/15/liu-cheng-kong-zhi/">http://yoursite.com/2019/12/15/liu-cheng-kong-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -696,7 +836,7 @@
                         <div class="article-tag">
                             
                                 <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                    <span class="chip bg-color">C</span>
                                 </a>
                             
                         </div>
@@ -868,22 +1008,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-yun-suan-fu-chong-zai/">
+                <a href="/2019/12/15/cpp-zhi-kao-bei-gou-zao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CPP之运算符重载">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CPP之拷贝构造">
                         
-                        <span class="card-title">CPP之运算符重载</span>
+                        <span class="card-title">CPP之拷贝构造</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            运算符重载的需求
-C++预定义的运算符，只能用于基本数据类型的运算：整型、实型、字符型、逻辑型.......+、-、*、/、%、^、&amp;、~、!、|、=、&lt;&lt;>>、!=、……
+                            拷贝构造1-调用时间
+1、新建一个对象，并将其初始化为同类现有对象
 
-在数学上，两个复数可以直接进行+、-等运算。
+#include &lt;iostream>
+using namespace std;
+
+class CStu
+{
+public:
+    CStu(){
+
+    }
+
                         
                     </div>
                     <div class="publish-info">
@@ -920,27 +1069,32 @@ C++预定义的运算符，只能用于基本数据类型的运算：整型、�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-nei-lian-han-shu/">
+                <a href="/2019/12/15/cpp-zhi-fu-gai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CPP之内联函数">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之覆盖">
                         
-                        <span class="card-title">CPP之内联函数</span>
+                        <span class="card-title">CPP之覆盖</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常规函数执行过程：
-调用时根据函数地址,跳到函数代码空间，执行指令。执行完，再跳转到调用的位置。综合：来回跳跃+记录跳跃的位置==一定的系统开销（资源+时间)。
-内联函数声明:
+                            覆盖定义
+父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖
 
-函数声明要加inline。
+数据成员同名类内: 
 
-函数定义要加inline
+子类覆盖父类，可以用类名作用域区分
 
-注
+类外:
+
+类名作用域区分
+
+代码实现:
+#include &lt;iostream>
+using n
                         
                     </div>
                     <div class="publish-info">
