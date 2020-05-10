@@ -18,8 +18,8 @@
   
   <entry>
     <title>linux之用户管理</title>
-    <link href="http://yoursite.com/2020/04/18/linux-zhi-yong-hu-guan-li/"/>
-    <id>http://yoursite.com/2020/04/18/linux-zhi-yong-hu-guan-li/</id>
+    <link href="http://yoursite.com/2020/04/18/linux/linux-zhi-yong-hu-guan-li/"/>
+    <id>http://yoursite.com/2020/04/18/linux/linux-zhi-yong-hu-guan-li/</id>
     <published>2020-04-18T02:05:49.000Z</published>
     <updated>2020-04-18T07:01:29.980Z</updated>
     
@@ -47,8 +47,8 @@
   
   <entry>
     <title>CPP之模板</title>
-    <link href="http://yoursite.com/2019/12/16/cpp-zhi-mo-ban/"/>
-    <id>http://yoursite.com/2019/12/16/cpp-zhi-mo-ban/</id>
+    <link href="http://yoursite.com/2019/12/16/c/cpp-zhi-mo-ban/"/>
+    <id>http://yoursite.com/2019/12/16/c/cpp-zhi-mo-ban/</id>
     <published>2019-12-16T07:58:05.000Z</published>
     <updated>2020-05-06T10:41:14.703Z</updated>
     
@@ -74,8 +74,8 @@
   
   <entry>
     <title>CPP之运算符重载</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-yun-suan-fu-chong-zai/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-yun-suan-fu-chong-zai/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-yun-suan-fu-chong-zai/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-yun-suan-fu-chong-zai/</id>
     <published>2019-12-15T13:34:29.000Z</published>
     <updated>2020-05-06T10:41:06.608Z</updated>
     
@@ -102,8 +102,8 @@
   
   <entry>
     <title>CPP之异常处理</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-yi-chang-chu-li/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-yi-chang-chu-li/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-yi-chang-chu-li/</id>
     <published>2019-12-15T13:33:42.000Z</published>
     <updated>2020-05-06T10:41:09.100Z</updated>
     
@@ -129,8 +129,8 @@
   
   <entry>
     <title>CPP之内联函数</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-nei-lian-han-shu/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-nei-lian-han-shu/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-nei-lian-han-shu/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-nei-lian-han-shu/</id>
     <published>2019-12-15T13:33:00.000Z</published>
     <updated>2020-05-06T10:41:12.252Z</updated>
     
@@ -156,8 +156,8 @@
   
   <entry>
     <title>CPP之拷贝构造</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-kao-bei-gou-zao/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-kao-bei-gou-zao/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-kao-bei-gou-zao/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-kao-bei-gou-zao/</id>
     <published>2019-12-15T13:32:28.000Z</published>
     <updated>2020-05-06T10:41:17.084Z</updated>
     
@@ -182,11 +182,67 @@
   </entry>
   
   <entry>
+    <title>1-基本数据类型</title>
+    <link href="http://yoursite.com/2019/12/15/c/ji-ben-shu-ju-lei-xing/"/>
+    <id>http://yoursite.com/2019/12/15/c/ji-ben-shu-ju-lei-xing/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-10T11:31:45.609Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;图示&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>流程控制</title>
     <link href="http://yoursite.com/2019/12/15/liu-cheng-kong-zhi/"/>
     <id>http://yoursite.com/2019/12/15/liu-cheng-kong-zhi/</id>
     <published>2019-12-15T13:23:51.000Z</published>
-    <updated>2020-05-10T09:19:10.298Z</updated>
+    <updated>2020-05-10T11:27:24.978Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;条件判断&quot;&gt;&lt;a href=&quot;#条件判断&quot; class=&quot;headerlink&quot; title=&quot;条件判断&quot;&gt;&lt;/a&gt;条件判断&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;if-else 语句&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个 &lt;strong&gt;if 语句&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2-流程控制</title>
+    <link href="http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/"/>
+    <id>http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-10T11:32:09.975Z</updated>
     
     <summary type="html">
     
@@ -211,8 +267,8 @@
   
   <entry>
     <title>CPP之覆盖</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-fu-gai/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-fu-gai/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</id>
     <published>2019-12-15T13:23:51.000Z</published>
     <updated>2020-05-06T10:41:23.445Z</updated>
     
@@ -238,8 +294,8 @@
   
   <entry>
     <title>CPP之继承</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-ji-cheng/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-ji-cheng/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-ji-cheng/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-ji-cheng/</id>
     <published>2019-12-15T13:23:08.000Z</published>
     <updated>2020-05-06T10:41:19.919Z</updated>
     
@@ -265,8 +321,8 @@
   
   <entry>
     <title>CPP之多态与虚函数</title>
-    <link href="http://yoursite.com/2019/12/15/cpp-zhi-duo-tai-yu-xu-han-shu/"/>
-    <id>http://yoursite.com/2019/12/15/cpp-zhi-duo-tai-yu-xu-han-shu/</id>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-duo-tai-yu-xu-han-shu/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-duo-tai-yu-xu-han-shu/</id>
     <published>2019-12-15T13:21:02.000Z</published>
     <updated>2020-05-06T10:41:46.164Z</updated>
     
@@ -292,8 +348,8 @@
   
   <entry>
     <title>CSS基础</title>
-    <link href="http://yoursite.com/2018/12/23/css-ji-chu/"/>
-    <id>http://yoursite.com/2018/12/23/css-ji-chu/</id>
+    <link href="http://yoursite.com/2018/12/23/css/css-ji-chu/"/>
+    <id>http://yoursite.com/2018/12/23/css/css-ji-chu/</id>
     <published>2018-12-23T13:59:49.000Z</published>
     <updated>2019-12-24T03:20:32.802Z</updated>
     
@@ -319,8 +375,8 @@
   
   <entry>
     <title>CSS定位</title>
-    <link href="http://yoursite.com/2018/12/23/css-ding-wei/"/>
-    <id>http://yoursite.com/2018/12/23/css-ding-wei/</id>
+    <link href="http://yoursite.com/2018/12/23/css/css-ding-wei/"/>
+    <id>http://yoursite.com/2018/12/23/css/css-ding-wei/</id>
     <published>2018-12-23T13:48:50.000Z</published>
     <updated>2019-12-23T13:54:10.706Z</updated>
     
@@ -346,8 +402,8 @@
   
   <entry>
     <title>float浮动</title>
-    <link href="http://yoursite.com/2018/12/23/float-fu-dong/"/>
-    <id>http://yoursite.com/2018/12/23/float-fu-dong/</id>
+    <link href="http://yoursite.com/2018/12/23/css/float-fu-dong/"/>
+    <id>http://yoursite.com/2018/12/23/css/float-fu-dong/</id>
     <published>2018-12-23T13:48:24.000Z</published>
     <updated>2019-12-23T13:54:31.256Z</updated>
     
@@ -373,8 +429,8 @@
   
   <entry>
     <title>CSS背景和列表</title>
-    <link href="http://yoursite.com/2018/12/23/css-bei-jing-he-lie-biao/"/>
-    <id>http://yoursite.com/2018/12/23/css-bei-jing-he-lie-biao/</id>
+    <link href="http://yoursite.com/2018/12/23/css/css-bei-jing-he-lie-biao/"/>
+    <id>http://yoursite.com/2018/12/23/css/css-bei-jing-he-lie-biao/</id>
     <published>2018-12-23T13:48:00.000Z</published>
     <updated>2019-12-23T13:53:58.421Z</updated>
     
@@ -400,8 +456,8 @@
   
   <entry>
     <title>盒子模型</title>
-    <link href="http://yoursite.com/2018/12/23/he-zi-mo-xing/"/>
-    <id>http://yoursite.com/2018/12/23/he-zi-mo-xing/</id>
+    <link href="http://yoursite.com/2018/12/23/css/he-zi-mo-xing/"/>
+    <id>http://yoursite.com/2018/12/23/css/he-zi-mo-xing/</id>
     <published>2018-12-23T13:47:28.000Z</published>
     <updated>2019-12-23T13:51:44.395Z</updated>
     
@@ -427,8 +483,8 @@
   
   <entry>
     <title>CSS字体和文本样式</title>
-    <link href="http://yoursite.com/2018/12/23/css-zi-ti-he-wen-ben-yang-shi/"/>
-    <id>http://yoursite.com/2018/12/23/css-zi-ti-he-wen-ben-yang-shi/</id>
+    <link href="http://yoursite.com/2018/12/23/css/css-zi-ti-he-wen-ben-yang-shi/"/>
+    <id>http://yoursite.com/2018/12/23/css/css-zi-ti-he-wen-ben-yang-shi/</id>
     <published>2018-12-23T13:46:51.000Z</published>
     <updated>2019-12-23T13:51:00.472Z</updated>
     

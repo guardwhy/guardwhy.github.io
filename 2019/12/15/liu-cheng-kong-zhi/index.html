@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -492,7 +492,7 @@
    <span class="token comment" spellcheck="true">/* 如果布尔表达式为假将执行的语句 */</span>
 <span class="token punctuation">}</span></code></pre>
 <p><strong>流程图</strong></p>
-<p>![](D:\学习笔记\C语言\images\2-1 流程图.jpg)</p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510181119.jpg" alt=""></p>
 <p>代码示例</p>
 <pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -1009,31 +1009,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-kao-bei-gou-zao/">
+                <a href="/2019/12/15/c/ji-ben-shu-ju-lei-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CPP之拷贝构造">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="1-基本数据类型">
                         
-                        <span class="card-title">CPP之拷贝构造</span>
+                        <span class="card-title">1-基本数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            拷贝构造1-调用时间
-1、新建一个对象，并将其初始化为同类现有对象
+                            基本数据类型图示：
 
-#include &lt;iostream>
-using namespace std;
-
-class CStu
-{
-public:
-    CStu(){
-
-    }
-
+变量变量的本质是内存中一段存储空间。
+初始化变量
+软件在运行前需要向操作系统申请存储空间，在内存空间足够空闲时，操作系统将分配一段内存空间并将该外存中软件拷贝一份存入该内存空间中，并启动该软件运行。
+在软件运行期间，该
                         
                     </div>
                     <div class="publish-info">
@@ -1045,7 +1038,7 @@ public:
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
                             <a href="/categories/C/" class="post-category">
-                                    C++
+                                    C
                                 </a>
                             
                             
@@ -1056,7 +1049,7 @@ public:
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                        <span class="chip bg-color">C</span>
                     </a>
                     
                 </div>
@@ -1070,32 +1063,24 @@ public:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/cpp-zhi-fu-gai/">
+                <a href="/2019/12/15/c/liu-cheng-kong-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之覆盖">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2-流程控制">
                         
-                        <span class="card-title">CPP之覆盖</span>
+                        <span class="card-title">2-流程控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            覆盖定义
-父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖
-
-数据成员同名类内: 
-
-子类覆盖父类，可以用类名作用域区分
-
-类外:
-
-类名作用域区分
-
-代码实现:
-#include &lt;iostream>
-using n
+                            条件判断if-else 语句
+一个 if 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为 false 时执行。
+语法：
+if(boolean_expression)
+{
+   /* 如果布尔表达式为真将执行的语句 */
                         
                     </div>
                     <div class="publish-info">
@@ -1107,7 +1092,7 @@ using n
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
                             <a href="/categories/C/" class="post-category">
-                                    C++
+                                    C
                                 </a>
                             
                             
@@ -1118,7 +1103,7 @@ using n
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                        <span class="chip bg-color">C</span>
                     </a>
                     
                 </div>
