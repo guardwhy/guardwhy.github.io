@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="1-基本数据类型, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="基本数据类型, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>1-基本数据类型 | guardwhy</title>
+    <title>基本数据类型 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">1-基本数据类型</h1>
+                    <h1 class="description center-align post-title">基本数据类型</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C</span>
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C
+                            <a href="/categories/c/" class="post-category">
+                                c
                             </a>
                         
                     </div>
@@ -480,98 +480,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p><strong>图示</strong>：</p>
+                <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>数据类型的本质就是一个模子。</li>
+<li>数据类型代表需要占用的内存的大小。</li>
+</ul>
+<p><strong>图示</strong>：</p>
 <p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/01.png" alt=""></p>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量的本质是内存中一段存储空间。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>变量的本质是内存中一段连续存储空间的别名。</li>
+<li>程序中通过变量来申请并且命名存储空间。</li>
+<li>通过变量的的名字可以使用存储空间。</li>
+</ul>
 <h4 id="初始化变量"><a href="#初始化变量" class="headerlink" title="初始化变量"></a>初始化变量</h4><ul>
 <li>软件在运行前需要向操作系统申请存储空间，在内存空间足够空闲时，操作系统将分配一段内存空间并将该外存中软件拷贝一份存入该内存空间中，并启动该软件运行。</li>
 <li>在软件运行期间，该软件所占内存空间不再分配给其他软件。</li>
 <li>当该软件运行完毕后，操作系统将回收该内存空间（==注意：操作系统并不清空该内存空间遗留下来的数据==），以便再次分配给其他软件使用。<font color="#ff0000"><strong>综上所述，一个软件所分配到的空间中极可能存在着以前其他软件使用过后的残留数据，这些数据被称之为垃圾数据。</strong></font>所以通常情况下我们为一个变量，为一个数组，分配好存储空间之前都要对该内存空间初始化。</li>
 </ul>
-<h3 id="对应进制数"><a href="#对应进制数" class="headerlink" title="对应进制数"></a>对应进制数</h3><table>
-<thead>
-<tr>
-<th>十进制</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-<th>16</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td>0</td>
-<td>1</td>
-<td>10</td>
-<td>11</td>
-<td>100</td>
-<td>101</td>
-<td>110</td>
-<td>111</td>
-<td>1000</td>
-<td>1001</td>
-<td>1010</td>
-<td>1011</td>
-<td>1100</td>
-<td>1101</td>
-<td>1110</td>
-<td>1111</td>
-<td>10000</td>
-</tr>
-<tr>
-<td>八进制</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>10</td>
-<td>11</td>
-<td>12</td>
-<td>13</td>
-<td>14</td>
-<td>15</td>
-<td>16</td>
-<td>17</td>
-<td>20</td>
-</tr>
-<tr>
-<td>十六进制</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>10</td>
-</tr>
-</tbody></table>
+<h3 id="对应进制数"><a href="#对应进制数" class="headerlink" title="对应进制数"></a>对应进制数</h3><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510203102.jpg" style="zoom:67%;">
+
 <h3 id="控制符的操作"><a href="#控制符的操作" class="headerlink" title="控制符的操作"></a>控制符的操作</h3><h4 id="printf-函数的使用"><a href="#printf-函数的使用" class="headerlink" title="printf()函数的使用"></a>printf()函数的使用</h4><pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
@@ -818,6 +744,44 @@
 
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h3 id="有符号和无符号"><a href="#有符号和无符号" class="headerlink" title="有符号和无符号"></a>有符号和无符号</h3><p>数据类型的最高位用于标识数据的符号。</p>
+<pre class=" language-css"><code class="language-css">最高位为<span class="token number">1</span>，表示这个数为负数。
+最高位为<span class="token number">0</span>，表示这个数为正数。</code></pre>
+<h4 id="有符号数的表示法"><a href="#有符号数的表示法" class="headerlink" title="有符号数的表示法"></a>有符号数的表示法</h4><p>1.在计算机内部用<strong>补码</strong>表示有符号数。</p>
+<ul>
+<li>正数的补码为正数本身。</li>
+<li>负数的补码为负数的绝对值各位<strong><font color="red">取反后加1</font></strong></li>
+</ul>
+<h4 id="无符号数表示法"><a href="#无符号数表示法" class="headerlink" title="无符号数表示法"></a>无符号数表示法</h4><p>2.在计算机内部用<strong>原码</strong>表示无符号数</p>
+<pre><code>- 无符号数默认为正数。
+- 无符号数没有符号位。</code></pre><h4 id="signed和unsigned"><a href="#signed和unsigned" class="headerlink" title="signed和unsigned"></a>signed和unsigned</h4><ul>
+<li>C语言中变量默认为有符号的类型。</li>
+<li><strong>unsigned</strong>关键字声明变量为无符号类型。</li>
+<li>C语言中只有<strong><font color="red">整数类型</font></strong>才能够声明<strong><font color="red">unsigned变量</font></strong></li>
+</ul>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">// 定义无符号数变量</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> j<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i + j > 0\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i + j &lt;= 0\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>注意</p>
+<pre class=" language-css"><code class="language-css">当无符号数与有符号数混合计算时候，会将有符号数转换为无符号数再进行计算，结果为无符号数。</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -899,8 +863,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C</span>
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c</span>
                                 </a>
                             
                         </div>
@@ -1072,68 +1036,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/c/cpp-zhi-kao-bei-gou-zao/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CPP之拷贝构造">
-                        
-                        <span class="card-title">CPP之拷贝构造</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            拷贝构造1-调用时间
-1、新建一个对象，并将其初始化为同类现有对象
-
-#include &lt;iostream>
-using namespace std;
-
-class CStu
-{
-public:
-    CStu(){
-
-    }
-
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/C/" class="post-category">
-                                    C++
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/15/liu-cheng-kong-zhi/">
+                <a href="/2019/12/15/c/liu-cheng-kong-zhi/">
                     <div class="card-image">
                         
                         
@@ -1154,6 +1057,68 @@ if(boolean_expression)
                         
                     </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/15/c/cpp-zhi-fu-gai/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之覆盖">
+                        
+                        <span class="card-title">CPP之覆盖</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            覆盖定义
+父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖
+
+数据成员同名类内: 
+
+子类覆盖父类，可以用类名作用域区分
+
+类外:
+
+类名作用域区分
+
+代码实现:
+#include &lt;iostream>
+using n
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
                             </span>
@@ -1162,7 +1127,7 @@ if(boolean_expression)
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
                             <a href="/categories/C/" class="post-category">
-                                    C
+                                    C++
                                 </a>
                             
                             
@@ -1173,7 +1138,7 @@ if(boolean_expression)
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">C</span>
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
