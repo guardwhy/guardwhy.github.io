@@ -182,11 +182,11 @@
   </entry>
   
   <entry>
-    <title>流程控制</title>
-    <link href="http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/"/>
-    <id>http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/</id>
+    <title>C语言之变量属性</title>
+    <link href="http://yoursite.com/2019/12/15/c/bian-liang-shu-xing/"/>
+    <id>http://yoursite.com/2019/12/15/c/bian-liang-shu-xing/</id>
     <published>2019-12-15T13:23:51.000Z</published>
-    <updated>2020-05-10T11:38:09.549Z</updated>
+    <updated>2020-05-11T04:07:48.165Z</updated>
     
     <summary type="html">
     
@@ -194,8 +194,7 @@
       
         
         
-          &lt;h3 id=&quot;条件判断&quot;&gt;&lt;a href=&quot;#条件判断&quot; class=&quot;headerlink&quot; title=&quot;条件判断&quot;&gt;&lt;/a&gt;条件判断&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;if-else 语句&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;一个 &lt;strong&gt;if 语句&lt;/strong&gt;
+          &lt;h3 id=&quot;变量属性&quot;&gt;&lt;a href=&quot;#变量属性&quot; class=&quot;headerlink&quot;
         
       
     
@@ -210,11 +209,11 @@
   </entry>
   
   <entry>
-    <title>基本数据类型</title>
+    <title>C语言之数据类型</title>
     <link href="http://yoursite.com/2019/12/15/c/ji-ben-shu-ju-lei-xing/"/>
     <id>http://yoursite.com/2019/12/15/c/ji-ben-shu-ju-lei-xing/</id>
     <published>2019-12-15T13:23:51.000Z</published>
-    <updated>2020-05-10T14:27:33.496Z</updated>
+    <updated>2020-05-11T04:07:23.347Z</updated>
     
     <summary type="html">
     
@@ -223,6 +222,34 @@
         
         
           &lt;h3 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="c" scheme="http://yoursite.com/categories/c/"/>
+    
+    
+      <category term="c" scheme="http://yoursite.com/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言之流程控制</title>
+    <link href="http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/"/>
+    <id>http://yoursite.com/2019/12/15/c/liu-cheng-kong-zhi/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-11T04:07:38.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;条件判断&quot;&gt;&lt;a href=&quot;#条件判断&quot; class=&quot;headerlink&quot; title=&quot;条件判断&quot;&gt;&lt;/a&gt;条件判断&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;if-else 语句&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个 &lt;strong&gt;if 语句&lt;/strong&gt;
         
       
     
