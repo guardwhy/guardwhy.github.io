@@ -568,7 +568,7 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>图示：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/31.jpg" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/31.jpg" alt></p>
 <h4 id="extern关键字"><a href="#extern关键字" class="headerlink" title="extern关键字"></a>extern关键字</h4><p>extern用于声明“<strong>外部</strong>”定义的变量和函数。</p>
 <ul>
 <li>extern变量在文件的其他地方分配空间。</li>
@@ -921,40 +921,39 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/c/cpp-zhi-duo-tai-yu-xu-han-shu/">
+                <a href="/2019/11/02/c-yu-yan/c-yu-yan-zhi-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CPP之多态与虚函数">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="C语言之函数">
                         
-                        <span class="card-title">CPP之多态与虚函数</span>
+                        <span class="card-title">C语言之函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            多态与虚函数的基本概念
+                            函数存在的意义
+避免了重复性操作。
+有利于程序的模块化
 
-多态是一种泛型编程思想，即同样的代码，实现不同的功能。
-父类的指针，调用子类的函数
-虚函数是实现这个思想的语法基础
+代码实现# include &lt;stdio.h>
 
-
-特点：
-
-父类指针指向子类空间，CFather* p = new CSon。但是不能调用子类的
+void max(int i, int j)
+{
+    //max是函数的名字, i和j是形式参数，简称形参 void表示函
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
                                 </a>
                             
                             
@@ -964,8 +963,8 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
                 </div>
@@ -979,40 +978,33 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/12/23/css/css-ji-chu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS基础">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
                         
-                        <span class="card-title">CSS基础</span>
+                        <span class="card-title">C语言之数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS样式规则css规则由两部分构成:
-选择器
-声明
-
-图片说明
-CSS引用写在head标签内：
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>css样式&lt;/title>
-
+                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
+元素的类型既可以是int类型，也可以是double类型。
+数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CSS/" class="post-category">
-                                    CSS
+                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
                                 </a>
                             
                             
@@ -1022,8 +1014,8 @@ CSS引用写在head标签内：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
                 </div>

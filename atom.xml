@@ -182,6 +182,33 @@
   </entry>
   
   <entry>
+    <title>CPP之覆盖</title>
+    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/"/>
+    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-06T10:41:23.445Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;覆盖定义&quot;&gt;&lt;a href=&quot;#覆盖定义&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言之流程控制</title>
     <link href="http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/"/>
     <id>http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/</id>
@@ -206,33 +233,6 @@
     
     
       <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CPP之覆盖</title>
-    <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/"/>
-    <id>http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</id>
-    <published>2019-12-15T13:23:51.000Z</published>
-    <updated>2020-05-06T10:41:23.445Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;覆盖定义&quot;&gt;&lt;a href=&quot;#覆盖定义&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
@@ -318,6 +318,37 @@
   </entry>
   
   <entry>
+    <title>C语言之函数</title>
+    <link href="http://yoursite.com/2019/11/02/c-yu-yan/c-yu-yan-zhi-han-shu/"/>
+    <id>http://yoursite.com/2019/11/02/c-yu-yan/c-yu-yan-zhi-han-shu/</id>
+    <published>2019-11-02T07:46:24.000Z</published>
+    <updated>2020-05-12T08:26:19.497Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;函数存在的意义&quot;&gt;&lt;a href=&quot;#函数存在的意义&quot; class=&quot;headerlink&quot; title=&quot;函数存在的意义&quot;&gt;&lt;/a&gt;函数存在的意义&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;避免了重复性操作。&lt;/li&gt;
+&lt;li&gt;有利于程序的模块化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言变量属性</title>
     <link href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/"/>
     <id>http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/</id>
@@ -331,6 +362,33 @@
         
         
           &lt;h3 id=&quot;变量属性&quot;&gt;&lt;a href=&quot;#变量属性&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言之数组</title>
+    <link href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/"/>
+    <id>http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/</id>
+    <published>2019-05-12T03:06:02.000Z</published>
+    <updated>2020-05-12T07:29:05.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;数组定义&quot;&gt;&lt;a href=&quot;#数组定义&quot; class=&quot;headerlink&quot;
         
       
     
