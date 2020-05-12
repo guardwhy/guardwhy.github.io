@@ -263,11 +263,11 @@
   </entry>
   
   <entry>
-    <title>c语言之变量属性</title>
-    <link href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/"/>
-    <id>http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/</id>
+    <title>C语言变量属性</title>
+    <link href="http://yoursite.com/2019/05/12/c-yu-yan-zhi-bian-liang-shu-xing/"/>
+    <id>http://yoursite.com/2019/05/12/c-yu-yan-zhi-bian-liang-shu-xing/</id>
     <published>2019-05-12T03:06:02.000Z</published>
-    <updated>2020-05-12T03:11:02.885Z</updated>
+    <updated>2020-05-12T03:21:59.640Z</updated>
     
     <summary type="html">
     
@@ -282,10 +282,10 @@
     </summary>
     
     
-      <category term="c" scheme="http://yoursite.com/categories/c/"/>
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="c" scheme="http://yoursite.com/tags/c/"/>
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
