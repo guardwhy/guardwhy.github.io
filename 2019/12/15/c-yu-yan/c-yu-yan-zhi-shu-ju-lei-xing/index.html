@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CPP之覆盖, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="C语言之数据类型, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CPP之覆盖 | guardwhy</title>
+    <title>C语言之数据类型 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CPP之覆盖</h1>
+                    <h1 class="description center-align post-title">C语言之数据类型</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">C语言</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                C语言
                             </a>
                         
                     </div>
@@ -480,117 +480,308 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="覆盖定义"><a href="#覆盖定义" class="headerlink" title="覆盖定义"></a>覆盖定义</h3><blockquote>
-<p>父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖</p>
-</blockquote>
-<h3 id="数据成员同名"><a href="#数据成员同名" class="headerlink" title="数据成员同名"></a>数据成员同名</h3><p><strong>类内:</strong> </p>
-<blockquote>
-<p>子类覆盖父类，可以用类名作用域区分</p>
-</blockquote>
-<p><strong>类外:</strong></p>
-<blockquote>
-<p>类名作用域区分</p>
-</blockquote>
-<p><strong>代码实现:</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CFather</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CFather</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CSon</span> <span class="token operator">:</span> <span class="token keyword">public</span> CFather
-<span class="token punctuation">{</span>
-
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CSon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//名字像同 就覆盖</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> CFather<span class="token operator">::</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 通过类名作用域调用</span>
-    cout <span class="token operator">&lt;&lt;</span> so<span class="token punctuation">.</span>CFather<span class="token operator">::</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="父类子类函数名字相同"><a href="#父类子类函数名字相同" class="headerlink" title="父类子类函数名字相同"></a>父类子类函数名字相同</h3><ul>
-<li>子类覆盖父类</li>
-<li>使用时可以通过类名作用域区分,父类子类的函数。</li>
-<li>没有重载关系。</li>
-<li>友元函数不能被继承。</li>
+                <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>数据类型的本质就是一个模子。</li>
+<li>数据类型代表需要占用的内存的大小。</li>
 </ul>
-<p><strong>代码实现：</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<p><strong>图示</strong>：</p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/01.png" alt=""></p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>变量的本质是内存中一段连续存储空间的别名。</li>
+<li>程序中通过变量来申请并且命名存储空间。</li>
+<li>通过变量的的名字可以使用存储空间。</li>
+</ul>
+<h4 id="初始化变量"><a href="#初始化变量" class="headerlink" title="初始化变量"></a>初始化变量</h4><ul>
+<li>软件在运行前需要向操作系统申请存储空间，在内存空间足够空闲时，操作系统将分配一段内存空间并将该外存中软件拷贝一份存入该内存空间中，并启动该软件运行。</li>
+<li>在软件运行期间，该软件所占内存空间不再分配给其他软件。</li>
+<li>当该软件运行完毕后，操作系统将回收该内存空间（==注意：操作系统并不清空该内存空间遗留下来的数据==），以便再次分配给其他软件使用。<font color="#ff0000"><strong>综上所述，一个软件所分配到的空间中极可能存在着以前其他软件使用过后的残留数据，这些数据被称之为垃圾数据。</strong></font>所以通常情况下我们为一个变量，为一个数组，分配好存储空间之前都要对该内存空间初始化。</li>
+</ul>
+<h3 id="对应进制数"><a href="#对应进制数" class="headerlink" title="对应进制数"></a>对应进制数</h3><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/20200510203102.jpg" style="zoom:67%;">
 
-<span class="token keyword">class</span> <span class="token class-name">CFather</span>
+<h3 id="控制符的操作"><a href="#控制符的操作" class="headerlink" title="控制符的操作"></a>控制符的操作</h3><h4 id="printf-函数的使用"><a href="#printf-函数的使用" class="headerlink" title="printf()函数的使用"></a>printf()函数的使用</h4><pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-<span class="token keyword">private</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> b<span class="token punctuation">;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CFather</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-        b <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//printf("哈哈!\n");  // \n表示换行</span>
 
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Cfather Fun"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//    int i = 10;</span>
+    <span class="token comment" spellcheck="true">//    printf("%o\n", i);  //i是整形，应该是%d</span>
 
-    <span class="token keyword">friend</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//printf("%d %d\n", j, k);  //OK</span>
+    <span class="token comment" spellcheck="true">//printf("%d\n", j, k);  //error 输出控制符和输出参数的个数不匹配</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d, j = %d\n"</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">class</span> <span class="token class-name">CSon</span> <span class="token operator">:</span> <span class="token keyword">public</span> CFather
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>printf()对应的格式化字符</strong></p>
+<table>
+<thead>
+<tr>
+<th>%d</th>
+<th>int</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>%ld</strong></td>
+<td><strong>long int</strong></td>
+</tr>
+<tr>
+<td><strong>%c</strong></td>
+<td><strong>char</strong></td>
+</tr>
+<tr>
+<td><strong>%f</strong></td>
+<td><strong>float</strong></td>
+</tr>
+<tr>
+<td><strong>%lf</strong></td>
+<td><strong>double</strong></td>
+</tr>
+<tr>
+<td><strong>%x</strong></td>
+<td><strong>int 或者long int 或者 short int</strong></td>
+</tr>
+<tr>
+<td><strong>%o</strong></td>
+<td><strong>同上</strong></td>
+</tr>
+<tr>
+<td><strong>%s</strong></td>
+<td><strong>字符串</strong></td>
+</tr>
+</tbody></table>
+<h4 id="Scanf-函数的用法"><a href="#Scanf-函数的用法" class="headerlink" title="Scanf()函数的用法"></a>Scanf()函数的用法</h4><p>功能：将从键盘输入的字符转化为输入控制符所规定格式的数据，然后存入以输入参数的值为地址的变量中。</p>
+<p>语法</p>
+<pre class=" language-css"><code class="language-css"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"输入控制符"</span>， 输入参数<span class="token punctuation">)</span></code></pre>
+<p>代码示例：</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-<span class="token keyword">private</span> <span class="token operator">:</span>
-    <span class="token keyword">int</span> c<span class="token punctuation">;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CSon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-        c <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//名字相同就覆盖，子类就会覆盖父类</span>
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"CSon Fun"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义变量i ch</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> ch<span class="token punctuation">;</span>
 
-<span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> so<span class="token punctuation">.</span>c <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//&amp;i 表示i的地址 &amp;是一个取地址符</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"ch = %c\n"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><ol>
+<li>大类型赋值给小类型时，又可能发生溢出。<ul>
+<li>当数值在小类型范围内，赋值成功。</li>
+<li>当数值超过小类型的范围，发生溢出。</li>
+</ul>
+</li>
+<li>小类型可以安全的赋值给大类型。</li>
+<li>浮点类型赋值给整形，会发生截断。(小数部分丢失)</li>
+<li>整型赋值给浮点类型，能够完成。</li>
+</ol>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 使用类名作用域去调用父类</span>
-    so<span class="token punctuation">.</span>CFather<span class="token operator">::</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">50000</span><span class="token punctuation">;</span>
+    <span class="token keyword">short</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">float</span> f <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// a=50000</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// b=0</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// a=50000</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// b = -15536</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    b <span class="token operator">=</span> <span class="token number">30000</span><span class="token punctuation">;</span>
+    a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a = 30000</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// b = 30000</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 0</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"f = %f\n"</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 0.200000</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    f <span class="token operator">=</span> <span class="token number">3.14f</span><span class="token punctuation">;</span>
+    i <span class="token operator">=</span> f<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// i=3</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"f = %f\n"</span><span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 3.140000</span>
+
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h3 id="逻辑运算与位运算"><a href="#逻辑运算与位运算" class="headerlink" title="逻辑运算与位运算"></a>逻辑运算与位运算</h3><h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><ul>
+<li>逻辑运算的参与者为逻辑值(真或假)。</li>
+<li>任何非零值在逻辑运算中都为真。</li>
+<li>任何零值在逻辑运算中都为假。</li>
+</ul>
+<p><strong>图示：</strong></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/02.jpg" alt=""></p>
+<p><strong>&amp;&amp;运算</strong></p>
+<ul>
+<li>从左向右进行，如果一个操作数为假，则表达式为假。</li>
+<li>第一个为假的操作数之后的其他操作数不在计算。</li>
+</ul>
+<p><strong>||运算</strong></p>
+<ul>
+<li>从左向右进行，如果有一个操作数为真，则整个表达式为真</li>
+<li>第一个为真的操作数之后的其他的操作数不在计算。</li>
+</ul>
+<p><strong>取非运算(!)</strong></p>
+<ol>
+<li><p>单目运算(只需要一个操作数)，运算结果为逻辑值。</p>
+<ul>
+<li><p>对真值取非的结果为假。</p>
+</li>
+<li><p>对假值取非的结果为真。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    c <span class="token operator">=</span> a <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    c <span class="token operator">=</span> <span class="token operator">!</span><span class="token punctuation">(</span>a <span class="token operator">-</span> b<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    c <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+    c <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>c<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p><strong>位运算(&amp;, |, ~, ^, &lt;&lt;, &gt;&gt;)</strong></p>
+<ul>
+<li>直接对数据的二进制位进行操作。</li>
+<li>位运算的基本单位是二进制，所以也是一种0和1的操作。</li>
+<li>可以使用括号()改变位运算的运算顺序。</li>
+<li>位运算的操作数只能是整型数。(浮点数不能直接进行位运算)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>~</strong></td>
+<td>按位求反</td>
+<td><del>0101</del>1010</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>&lt;&lt;</strong></td>
+<td>左移：高位移出，低位补零</td>
+<td>0011 &lt;&lt; 1 ~ 0110</td>
+<td>2</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>右移：低位移出，高位补符号位</td>
+<td>0101 &gt;&gt; 2 ~ 0001</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>&amp;</strong></td>
+<td>按位与</td>
+<td>0111 &amp; 1100 ~ 0100</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>^</strong></td>
+<td>按位异或：相同为0,不同为1</td>
+<td>0111 ^1100 ~ 1011</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>|</strong></td>
+<td>按位或</td>
+<td>0111 | 1100 - 1111</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong></p>
+<ul>
+<li>按位与和逻辑与的计算法相同:两者为1,结果为1,否则为0.</li>
+<li>按位或和逻辑或的计算法相同:两者为0,结果为0，否则为1。</li>
+</ul>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">|</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 7</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> <span class="token number">7</span> <span class="token operator">^</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 15</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">^</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">15</span> <span class="token operator">>></span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %d\n"</span><span class="token punctuation">,</span> <span class="token number">173</span> <span class="token operator">^</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 145</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="有符号和无符号"><a href="#有符号和无符号" class="headerlink" title="有符号和无符号"></a>有符号和无符号</h3><p>数据类型的最高位用于标识数据的符号。</p>
+<pre class=" language-css"><code class="language-css">最高位为<span class="token number">1</span>，表示这个数为负数。
+最高位为<span class="token number">0</span>，表示这个数为正数。</code></pre>
+<h4 id="有符号数的表示法"><a href="#有符号数的表示法" class="headerlink" title="有符号数的表示法"></a>有符号数的表示法</h4><p>1.在计算机内部用<strong>补码</strong>表示有符号数。</p>
+<ul>
+<li>正数的补码为正数本身。</li>
+<li>负数的补码为负数的绝对值各位<strong><font color="red">取反后加1</font></strong></li>
+</ul>
+<h4 id="无符号数表示法"><a href="#无符号数表示法" class="headerlink" title="无符号数表示法"></a>无符号数表示法</h4><p>2.在计算机内部用<strong>原码</strong>表示无符号数</p>
+<pre><code>- 无符号数默认为正数。
+- 无符号数没有符号位。</code></pre><h4 id="signed和unsigned"><a href="#signed和unsigned" class="headerlink" title="signed和unsigned"></a>signed和unsigned</h4><ul>
+<li>C语言中变量默认为有符号的类型。</li>
+<li><strong>unsigned</strong>关键字声明变量为无符号类型。</li>
+<li>C语言中只有<strong><font color="red">整数类型</font></strong>才能够声明<strong><font color="red">unsigned变量</font></strong></li>
+</ul>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">// 定义无符号数变量</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> j<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i + j > 0\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i + j &lt;= 0\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>注意</p>
+<pre class=" language-css"><code class="language-css">当无符号数与有符号数混合计算时候，会将有符号数转换为无符号数再进行计算，结果为无符号数。</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -634,7 +825,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/">http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</a>
+                    <a href="http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/">http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -672,8 +863,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">C语言</span>
                                 </a>
                             
                         </div>
@@ -845,24 +1036,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/">
+                <a href="/2019/12/15/c/cpp-zhi-fu-gai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C语言之流程控制">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之覆盖">
                         
-                        <span class="card-title">C语言之流程控制</span>
+                        <span class="card-title">CPP之覆盖</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            条件判断if-else 语句
-一个 if 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为 false 时执行。
-语法：
-if(boolean_expression)
-{
-   /* 如果布尔表达式为真将执行的语句 */
+                            覆盖定义
+父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖
+
+数据成员同名类内: 
+
+子类覆盖父类，可以用类名作用域区分
+
+类外:
+
+类名作用域区分
+
+代码实现:
+#include &lt;iostream>
+using n
                         
                     </div>
                     <div class="publish-info">
@@ -873,8 +1072,8 @@ if(boolean_expression)
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -884,8 +1083,8 @@ if(boolean_expression)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
@@ -899,31 +1098,20 @@ if(boolean_expression)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/">
+                <a href="/2019/12/15/c/cpp-zhi-ji-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C语言之数据类型">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之继承">
                         
-                        <span class="card-title">C语言之数据类型</span>
+                        <span class="card-title">CPP之继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据类型
-数据类型的本质就是一个模子。
-数据类型代表需要占用的内存的大小。
-
-图示：
-
-变量
-变量的本质是内存中一段连续存储空间的别名。
-程序中通过变量来申请并且命名存储空间。
-通过变量的的名字可以使用存储空间。
-
-初始化变量
-软件在运行前
+                            继承和派生的概念继承：在定义一个新的类B时，如果该类与某个已有的类A相似(指的是B拥有A的全部特点)，那么就可以把A作为一个 基类，而把B作为基类的一个 派生类( ( 也称子类) )。
+派生类是通过对基类进行修改和扩充得到的。在派生类中，可
                         
                     </div>
                     <div class="publish-info">
@@ -934,8 +1122,8 @@ if(boolean_expression)
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -945,8 +1133,8 @@ if(boolean_expression)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>

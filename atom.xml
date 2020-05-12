@@ -182,6 +182,34 @@
   </entry>
   
   <entry>
+    <title>C语言之流程控制</title>
+    <link href="http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/"/>
+    <id>http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-12T03:26:44.691Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;条件判断&quot;&gt;&lt;a href=&quot;#条件判断&quot; class=&quot;headerlink&quot; title=&quot;条件判断&quot;&gt;&lt;/a&gt;条件判断&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;if-else 语句&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个 &lt;strong&gt;if 语句&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CPP之覆盖</title>
     <link href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/"/>
     <id>http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</id>
@@ -205,6 +233,33 @@
     
     
       <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言之数据类型</title>
+    <link href="http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/"/>
+    <id>http://yoursite.com/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/</id>
+    <published>2019-12-15T13:23:51.000Z</published>
+    <updated>2020-05-12T03:26:29.587Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -264,8 +319,8 @@
   
   <entry>
     <title>C语言变量属性</title>
-    <link href="http://yoursite.com/2019/05/12/c-yu-yan-zhi-bian-liang-shu-xing/"/>
-    <id>http://yoursite.com/2019/05/12/c-yu-yan-zhi-bian-liang-shu-xing/</id>
+    <link href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/"/>
+    <id>http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/</id>
     <published>2019-05-12T03:06:02.000Z</published>
     <updated>2020-05-12T03:21:59.640Z</updated>
     
