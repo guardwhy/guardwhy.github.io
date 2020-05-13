@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -340,7 +340,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/2.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/3.jpg)');
 </script>
 
 
@@ -477,20 +477,68 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                函数存在的意义
-避免了重复性操作。
-有利于程序的模块化
-
-代码实现# include &lt;stdio.h>
-
-void max(int i, int j)
-{
-    //max是函数的名字, i和j是形式参数，简称形参 void表示函
+                                函数的定义1.逻辑上：能够完成特定功能的独立的代码块。 
+2.物理上：能够接收数据【也可以不接收数据】，能够对接收的数据进行处理【也可以不对数据进行处理】，能够将数据处理的结果返【也可以没有返回值】。 
+3.函数定义的本质：详细描述函数之所
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                            <span class="chip bg-color">C语言</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
+                            
+                            <span class="card-title">C语言之指针数组</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                指针案例代码示例
+# include &lt;stdio.h>
+
+int main(void)
+{
+    int * p; //等价于 int *p; 也等价于 int* p;
+    int i = 5;
+    char ch = '
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
                             </span>
                             <span class="publish-author">
                                 
@@ -533,9 +581,10 @@ void max(int i, int j)
                         <div class="summary block-with-text">
                             
                                 内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
-2、地址内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
 地址
-内存单元的一个编号。而
+内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
+
+- 内存单元的编号，是一个从
                             
                         </div>
                         <div class="publish-info">
@@ -585,6 +634,60 @@ void max(int i, int j)
                                 数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
 元素的类型既可以是int类型，也可以是double类型。
 数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                            <span class="chip bg-color">C语言</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
+                            
+                            <span class="card-title">C语言之指针函数</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                互换数字# include &lt;stdio.h>
+
+void swap1(int , int);
+void swap2(int *, int *);
+void swap3(int *, int *);
+
+int main(void)
+{
                             
                         </div>
                         <div class="publish-info">
@@ -752,114 +855,6 @@ CSS引用写在head标签内：
 
 特点
 (1)忽略top,bottom,le
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/23/qian-duan/css/float-fu-dong/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="float浮动">
-                            
-                            <span class="card-title">float浮动</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                css定位机制普通流(标准流)
-块元素：元素从上往下的排列
-行内元素:元素自动从左往右排列。
-
-块元素
-独占一行
-可以设置宽、高
-如果不设置宽度，宽度默认为容器的100%
-主要有div、p、h1~h6、ul、ol、li、dl、dt、dd
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/23/qian-duan/css/css-bei-jing-he-lie-biao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="CSS背景和列表">
-                            
-                            <span class="card-title">CSS背景和列表</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                背景背景颜色(background-color)
-设置元素的背景的颜色，background-color: 颜色｜ transparent
-
-注意
-transparent是全透明黑色(black)的速记法，类似rgba(0,0,0,0)这样
                             
                         </div>
                         <div class="publish-info">

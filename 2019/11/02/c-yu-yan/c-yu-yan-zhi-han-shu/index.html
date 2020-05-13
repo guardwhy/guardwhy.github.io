@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="guardwhy" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -480,12 +480,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="函数存在的意义"><a href="#函数存在的意义" class="headerlink" title="函数存在的意义"></a>函数存在的意义</h4><ul>
+                <h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>1.逻辑上：能够完成特定功能的独立的代码块。 </p>
+<p>2.物理上：能够接收数据【也可以不接收数据】，能够对接收的数据进行处理【也可以不对数据进行处理】，能够将数据处理的结果返【也可以没有返回值】。 </p>
+<p>3.函数定义的本质：详细描述函数之所以能够实现某个特定功能的具体方法。</p>
+<p><strong>语法</strong></p>
+<pre class=" language-c"><code class="language-c">返回值类型 函数名（形式参数列表）
+<span class="token punctuation">{</span>
+    函数体；
+<span class="token punctuation">}</span></code></pre>
+<p><strong>返回值类型：</strong>用户需要函数返回的数据类型。<br><strong>函数名：</strong>代表的是函数的入口地址。<br><strong>形式参数列表：</strong>就是用户将函数外部数据传入函数内部的 局部变量。<br><strong>函数体：</strong>函数的具体功能代码。</p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"最大值是:%d\n"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="形式参数列表（形参）"><a href="#形式参数列表（形参）" class="headerlink" title="形式参数列表（形参）"></a>形式参数列表（形参）</h3><p>形参在函数定义的时候没有空间,只有在调用函数的时候形参才有空间。函数调用完形参自动释放。</p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span></code></pre>
+<p><strong>注意：</strong>在定义函数的时候，不要给形参赋值</p>
+<h4 id="函数存在的意义"><a href="#函数存在的意义" class="headerlink" title="函数存在的意义"></a>函数存在的意义</h4><ul>
 <li>避免了重复性操作。</li>
 <li>有利于程序的模块化</li>
 </ul>
 <h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
+<span class="token comment" spellcheck="true">// 函数声明</span>
 <span class="token keyword">void</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//max是函数的名字, i和j是形式参数，简称形参 void表示函数没有返回值</span>
@@ -502,6 +521,7 @@
     <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">,</span> e<span class="token punctuation">,</span> f<span class="token punctuation">;</span>
 
     a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> c <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">,</span> e <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
     <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">max</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">max</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -523,18 +543,7 @@
     */</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>1.逻辑上：能够完成特定功能的独立的代码块。 </p>
-<p>2.物理上：能够接收数据【也可以不接收数据】，能够对接收的数据进行处理【也可以不对数据进行处理】，能够将数据处理的结果返【也可以没有返回值】。 </p>
-<p><strong>语法</strong></p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">- 函数的返回值，函数的名字（函数的形参列表）
-    </span><span class="token punctuation">{</span>
-            函数的执行体
-    <span class="token punctuation">}</span>
-
-- 函数定义的本质：详细描述函数之所以能够实现某个特定功能的具体方法。
-
-- 函数中的变量叫做形参；数组中的变量叫元素。一旦函数执行完毕，其内部的形参所占空间就被收回。</code></pre>
-<h4 id="return-表达式含义"><a href="#return-表达式含义" class="headerlink" title="return 表达式含义"></a><strong>return 表达式含义</strong></h4><p>return是终止被调函数，向主调函数返回表达式的值，如果表达式为空，则只终止函数，不向被主函数返回任何值。 </p>
+<h4 id="return-表达式含义"><a href="#return-表达式含义" class="headerlink" title="return 表达式含义"></a>return 表达式含义</h4><p>return是终止被调函数，向主调函数返回表达式的值，如果表达式为空，则只终止函数，不向被主函数返回任何值。 </p>
 <p>代码示例</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
@@ -666,13 +675,11 @@ bool <span class="token function">IsPrime</span><span class="token punctuation">
 <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"哈哈!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-<span class="token comment" spellcheck="true">/*
-    2018年11月4日11:01:35
-    一定要明白该程序为什么是错误的
-    一定要明白该程序第9行生效之后程序为什么就正确了
-*/</span>
-<span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+</code></pre>
+<p><strong>注意</strong></p>
+<p>当函数没有返回值时，那么规范的写法是要在函数中写明void的。如果函数调用写在了函数定义的前面，则必须加函数前置声明。 </p>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token comment" spellcheck="true">//void fmin(void);  //9行</span>
 
@@ -692,8 +699,6 @@ bool <span class="token function">IsPrime</span><span class="token punctuation">
 
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><strong>注意</strong></p>
-<p>当函数没有返回值时，那么规范的写法是要在函数中写明void的。如果函数调用写在了函数定义的前面，则必须加函数前置声明。 </p>
 <h4 id="形参和实参的关系"><a href="#形参和实参的关系" class="headerlink" title="形参和实参的关系"></a>形参和实参的关系</h4><ul>
 <li>形参和实参个数是一一对应的。 </li>
 <li>形参和实参的位置也是一一对应的。 </li>
@@ -1211,22 +1216,26 @@ i和j都是局部变量</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-ji-chu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言之指针基础">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
                         
-                        <span class="card-title">C语言之指针基础</span>
+                        <span class="card-title">C语言之指针数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
-2、地址内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
-地址
-内存单元的一个编号。而
+                            指针案例代码示例
+# include &lt;stdio.h>
+
+int main(void)
+{
+    int * p; //等价于 int *p; 也等价于 int* p;
+    int i = 5;
+    char ch = '
                         
                     </div>
                     <div class="publish-info">
