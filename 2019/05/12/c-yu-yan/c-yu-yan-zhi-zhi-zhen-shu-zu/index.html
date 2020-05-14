@@ -480,27 +480,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="指针案例"><a href="#指针案例" class="headerlink" title="指针案例"></a>指针案例</h3><p>代码示例</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+                <h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> <span class="token operator">*</span> p<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//等价于 int *p; 也等价于 int* p;</span>
-    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-    <span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 1.定义数组</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//arr作为类型</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(arr) = %d\n"</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//数组的总大小</span>
 
-    p <span class="token operator">=</span> <span class="token operator">&amp;</span>i<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// *p 以p的内容为地址的变量</span>
-    <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i = %d, *p = %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//arr作为地址 代表首元素的地址</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"arr = %u\n"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//int *</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"arr+1 = %u\n"</span><span class="token punctuation">,</span> arr<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment" spellcheck="true">//p = &amp;ch;</span>
-    <span class="token comment" spellcheck="true">//p = ch; //error</span>
-    <span class="token comment" spellcheck="true">//p = 5;  //error</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"arr[1] = %d\n"</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*(arr+1) = %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span>arr<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"---------------------\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//arr[1]展开成*（arr+1）:[]外边的值 在+的左边  []里面的值在+的右边</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*(1+arr) = %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"1[arr] = %d\n"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">[</span>arr<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
+
+    <span class="token comment" spellcheck="true">//[] 是 *() 的缩写(重要)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//printf("%d ", arr[i]);</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> i<span class="token punctuation">[</span>arr<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//arr 作为地址 是首元素的地址</span>
+    <span class="token comment" spellcheck="true">//&amp;arr[0] == &amp;*(arr+0) == arr+0 == arr</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>程序运行结果</p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8805.jpg" alt></p>
+<h3 id="数组元素指针"><a href="#数组元素指针" class="headerlink" title="数组元素指针"></a>数组元素指针</h3><p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * 需求：定义一个指针变量 保存arr数组元素的地址
+     */</span>
+
+    <span class="token comment" spellcheck="true">// 声明一个数组</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> arr<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//int *p;  p=arr;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//printf("%d ", *(p + i));</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(arr) = %d\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(p) = %d\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4</span>
+
+    <span class="token comment" spellcheck="true">/**
+     *不要认为p只能保存首元素地址
+     * 指针变量 起始指向哪儿？  p[x] == *(p+x)
+     */</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>p1 <span class="token operator">=</span> <span class="token operator">&amp;</span>arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"p1[1] = %d\n"</span><span class="token punctuation">,</span> p1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//40</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"p1[-1] = %d\n"</span><span class="token punctuation">,</span> p1<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
 
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>程序运行结果</p>
-<pre class=" language-css"><code class="language-css">i=<span class="token number">99</span>, *p=<span class="token number">99</span></code></pre>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8806.jpg" alt></p>
+<h4 id="案例说明"><a href="#案例说明" class="headerlink" title="案例说明"></a>案例说明</h4><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//10;; *p;  p++</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20 ; *p; (*p) = (*p) +1</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span>p<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//21</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>程序运行结果</p>
+<pre class=" language-css"><code class="language-css"><span class="token number">10</span>
+<span class="token number">20</span>
+<span class="token number">21</span></code></pre>
+<h4 id="同一数组的两个元素指针的关系"><a href="#同一数组的两个元素指针的关系" class="headerlink" title="同一数组的两个元素指针的关系"></a>同一数组的两个元素指针的关系</h4><ul>
+<li>指向同一数组的两个元素指针变量相减,<strong>是两指针变量间元素的个数</strong>。</li>
+<li>指向同一数组的两个元素指针变量 相加。无意义。</li>
+<li>指向同一数组的两个元素指针变量 p1 = p2;(p1和p2指向同一处)</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -755,21 +826,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
                         
-                        <span class="card-title">C语言之数组</span>
+                        <span class="card-title">C语言之指针函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
-元素的类型既可以是int类型，也可以是double类型。
-数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
+                            互换数字# include &lt;stdio.h>
+
+void swap1(int , int);
+void swap2(int *, int *);
+void swap3(int *, int *);
+
+int main(void)
+{
                         
                     </div>
                     <div class="publish-info">
@@ -806,26 +882,21 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
                         
-                        <span class="card-title">C语言之指针函数</span>
+                        <span class="card-title">C语言之数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            互换数字# include &lt;stdio.h>
-
-void swap1(int , int);
-void swap2(int *, int *);
-void swap3(int *, int *);
-
-int main(void)
-{
+                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
+元素的类型既可以是int类型，也可以是double类型。
+数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
                         
                     </div>
                     <div class="publish-info">
