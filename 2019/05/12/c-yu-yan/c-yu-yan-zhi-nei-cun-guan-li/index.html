@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CPP之覆盖, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="C语言之内存管理, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CPP之覆盖 | guardwhy</title>
+    <title>C语言之内存管理 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CPP之覆盖</h1>
+                    <h1 class="description center-align post-title">C语言之内存管理</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">C语言</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                C语言
                             </a>
                         
                     </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-15
+                    2019-05-12
                 </div>
                 
 
@@ -480,117 +480,145 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="覆盖定义"><a href="#覆盖定义" class="headerlink" title="覆盖定义"></a>覆盖定义</h3><blockquote>
-<p>父类和子类中出现同名的成员时，C++采用的一种处理方式，就叫覆盖</p>
-</blockquote>
-<h3 id="数据成员同名"><a href="#数据成员同名" class="headerlink" title="数据成员同名"></a>数据成员同名</h3><p><strong>类内:</strong> </p>
-<blockquote>
-<p>子类覆盖父类，可以用类名作用域区分</p>
-</blockquote>
-<p><strong>类外:</strong></p>
-<blockquote>
-<p>类名作用域区分</p>
-</blockquote>
-<p><strong>代码实现:</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CFather</span>
+                <h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><h4 id="传统数组的缺点"><a href="#传统数组的缺点" class="headerlink" title="传统数组的缺点"></a>传统数组的缺点</h4><p> 1.数组长度必须事先指定，而且只能是常整数，不能是变量。</p>
+<p>代码示例</p>
+<pre class=" language-css"><code class="language-css">例子int a[<span class="token number">5</span>]<span class="token punctuation">;</span>     //必须事先指定，而且只能是常整数int len = <span class="token number">5</span><span class="token punctuation">;</span> int a[len]<span class="token punctuation">;</span>//error</code></pre>
+<p>2.传统形式定义的数组，该数组的内存程序员无法手动释放数组一旦定义，系统为数组分配的内存空间就会一直存在，除非数组所在的函数运行终止，数组的空间才会被系统自动释放（不是清零)。。</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CFather</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">CSon</span> <span class="token operator">:</span> <span class="token keyword">public</span> CFather
+    <span class="token comment" spellcheck="true">//数组a 占20个字节的内存空间，无法手动编程释放它，数组a只能在f()函数结束被系统释放 </span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> </code></pre>
+<p>3、数组的长度一旦定义，数组长度就不能再更改。</p>
+<pre class=" language-css"><code class="language-css">数组的长度不能在函数运行的过程中动态的扩充或缩小。</code></pre>
+<p> 4、传统方式定义的数组不能跨函数使用 。</p>
+<pre class=" language-css"><code class="language-css">A函数定义的数组，只有在A函数运行期间才可以被其他函数使用。
+但A函数运行完毕后，A函数中的数组将无法在被其他函数使用。</code></pre>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">void</span> <span class="token function">gmin</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span> pArr<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
+    pArr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">88</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//pArr[2] == a[2]</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CSon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">fmax</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>    
+    <span class="token comment" spellcheck="true">/*
+        20个字节的存储空间程序员无法手动编程释放它，它只能在本函数运行完毕时由系统自动释放
+    */</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  
+    <span class="token function">gmin</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//名字像同 就覆盖</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> CFather<span class="token operator">::</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 通过类名作用域调用</span>
-    cout <span class="token operator">&lt;&lt;</span> so<span class="token punctuation">.</span>CFather<span class="token operator">::</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>    
+    <span class="token function">fmax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="父类子类函数名字相同"><a href="#父类子类函数名字相同" class="headerlink" title="父类子类函数名字相同"></a>父类子类函数名字相同</h3><ul>
-<li>子类覆盖父类</li>
-<li>使用时可以通过类名作用域区分,父类子类的函数。</li>
-<li>没有重载关系。</li>
-<li>友元函数不能被继承。</li>
-</ul>
-<p><strong>代码实现：</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<h3 id="动态内存分配-1"><a href="#动态内存分配-1" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><blockquote>
+<p> 很好的解决的了传统数组的4个缺陷 ( malloc的使用 )</p>
+</blockquote>
+<p>代码示例</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
 
-<span class="token keyword">class</span> <span class="token class-name">CFather</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-<span class="token keyword">private</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> b<span class="token punctuation">;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CFather</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-        b <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span> p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Cfather Fun"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"malloc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//清空空间</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">friend</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*p=%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">class</span> <span class="token class-name">CSon</span> <span class="token operator">:</span> <span class="token keyword">public</span> CFather
-<span class="token punctuation">{</span>
-<span class="token keyword">private</span> <span class="token operator">:</span>
-    <span class="token keyword">int</span> c<span class="token punctuation">;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-    <span class="token function">CSon</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-        c <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//名字相同就覆盖，子类就会覆盖父类</span>
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"CSon Fun"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> so<span class="token punctuation">.</span>c <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 释放</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    CSon so<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 使用类名作用域去调用父类</span>
-    so<span class="token punctuation">.</span>CFather<span class="token operator">::</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h4 id="malloc实现图解"><a href="#malloc实现图解" class="headerlink" title="malloc实现图解"></a>malloc实现图解</h4><p>图示：</p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8811.png" alt=""></p>
+<h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h></span></span>
+
+<span class="token keyword">void</span> <span class="token function">fmin</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span> q<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//*p = 200; //error</span>
+    <span class="token comment" spellcheck="true">//q = 200;     //200不是整型变量的地址，q只能存放整型变量的地址</span>
+    <span class="token comment" spellcheck="true">//**q = 200;  //error</span>
+    <span class="token operator">*</span>q <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//free(q);  //把q所指向的内存释放掉  本语句必须的注释掉，否则会导致第20行的代码出错</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span> p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//sizeof(int)返回值是int所占的字节数</span>
+    <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//10</span>
+    <span class="token function">fmin</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//p是int *类型</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//200    第20行</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>图解</strong></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8812.png" alt=""></p>
+<h3 id="动态一维数组示例"><a href="#动态一维数组示例" class="headerlink" title="动态一维数组示例"></a>动态一维数组示例</h3><h4 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//如果int占4个字节的话，则本数组总共包含有20个字节，每四个字节被当做了一个int变量来使用</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> len<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span> pArr<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//动态的构造一维数组</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入你要存放的元素的个数: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/*
+    本行动态的构造了一个一维数组, 该一维数组的产度是len, 该数组的数组名是pArr.
+    该数组的每个元素是int类型  类似于 int pArr[len];
+    */</span>
+    pArr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+
+    <span class="token comment" spellcheck="true">//对一维数组进行操作，  如：对动态一维数组进行赋值</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>pArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//对位一维数组进行输出</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"一维数组的内容是:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> pArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">free</span><span class="token punctuation">(</span>pArr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//释放掉动态分配的数组</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+<h4 id="图解动态一维数组"><a href="#图解动态一维数组" class="headerlink" title="图解动态一维数组"></a>图解动态一维数组</h4><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/指针13.png" style="zoom:80%;">
+
+<h3 id="动态数组的优点"><a href="#动态数组的优点" class="headerlink" title="动态数组的优点"></a>动态数组的优点</h3><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>动态数组长度不需要事先给定；
+
+<span class="token number">2.</span>内存空间可以手动释放。
+
+<span class="token number">3.</span>在程序运行中，动态内存空间大小可以通过realloc函数手动扩充或缩小</code></pre>
+<h3 id="静态内存和动态内存的比较"><a href="#静态内存和动态内存的比较" class="headerlink" title="静态内存和动态内存的比较"></a>静态内存和动态内存的比较</h3><pre class=" language-text"><code class="language-text">- 静态内存是由系统自动分配，有系统自动释放
+- 静态内存是在栈分配的        
+
+- 动态内存是由程序员手动分配、手动释放
+- 动态内存是在堆分配的</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -634,7 +662,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/">http://yoursite.com/2019/12/15/c/cpp-zhi-fu-gai/</a>
+                    <a href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -672,8 +700,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">C语言</span>
                                 </a>
                             
                         </div>
@@ -845,36 +873,29 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/c-yu-yan/c-yu-yan-zhi-shu-ju-lei-xing/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C语言之数据类型">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
                         
-                        <span class="card-title">C语言之数据类型</span>
+                        <span class="card-title">C语言变量属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据类型
-数据类型的本质就是一个模子。
-数据类型代表需要占用的内存的大小。
-
-图示：
-
-变量
-变量的本质是内存中一段连续存储空间的别名。
-程序中通过变量来申请并且命名存储空间。
-通过变量的的名字可以使用存储空间。
-
-初始化变量
-软件在运行前
+                            变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
                         </span>
                         <span class="publish-author">
                             
@@ -906,29 +927,36 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/c-yu-yan/c-yu-yan-zhi-liu-cheng-kong-zhi/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C语言之流程控制">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
                         
-                        <span class="card-title">C语言之流程控制</span>
+                        <span class="card-title">C语言之指针数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            条件判断if-else 语句
-一个 if 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为 false 时执行。
-语法：
-if(boolean_expression)
-{
-   /* 如果布尔表达式为真将执行的语句 */
+                            指针数组
+本质是数组 只是每个元素的类型是指针。
+
+图示
+
+
+代码示例
+#include &lt;stdio.h>
+
+int main() {
+    int num1 = 10;
+    int num2 = 20;
+    int nu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
                             </span>
                         <span class="publish-author">
                             
