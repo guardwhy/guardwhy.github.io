@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CPP之内联函数, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="C++引用, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CPP之内联函数 | guardwhy</title>
+    <title>C++引用 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CPP之内联函数</h1>
+                    <h1 class="description center-align post-title">C++引用</h1>
                 </div>
             </div>
         </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-15
+                    2019-01-15
                 </div>
                 
 
@@ -480,72 +480,240 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="常规函数"><a href="#常规函数" class="headerlink" title="常规函数"></a>常规函数</h3><p><strong>执行过程</strong>：</p>
-<p>调用时根据函数地址,跳到函数代码空间，执行指令。执行完，再跳转到调用的位置。综合：来回跳跃+记录跳跃的位置==一定的系统开销（资源+时间)。</p>
-<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p><strong>声明:</strong></p>
+                <h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="引用的特点"><a href="#引用的特点" class="headerlink" title="引用的特点"></a>引用的特点</h4><p><strong>引用是c++对c的重要扩充。</strong>在c/c++中指针的作用基本都是一样的，但是c++增加了另外一种给函数传递地址的途径，这就是按引用传递。</p>
 <ul>
-<li><p>函数声明要加inline。</p>
-</li>
-<li><p>函数定义要加inline</p>
-<blockquote>
-<p>注意：只在声明位置写inline不管用.</p>
-</blockquote>
-</li>
+<li>变量名实质上是<font color="red"><strong>一段连续内存空间</strong></font>的别名，是一个标号。</li>
+<li>程序中通过变量来申请并命名内存空间</li>
+<li>通过变量的名字可以使用存储空间</li>
 </ul>
-<p><strong>作用：</strong></p>
-<ul>
-<li>用相应的代码替换调用</li>
-<li>比常规函数稍快</li>
-<li>代价是占用更多内存</li>
-</ul>
-<p><strong>特点：</strong></p>
-<ul>
-<li>内联函数比宏功能更强。</li>
-<li>类内定义都是内联函数。</li>
-<li>类外定义，有inline 是内联,没有inline不是内联。</li>
-<li>内联函数与多文件，内联函数可以有多个定义，多个定义必须完全一致。所以通常内联函数写在头文件里。</li>
-</ul>
-<p><strong>代码示例:</strong></p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<p><strong>基本语法</strong></p>
+<pre class=" language-css"><code class="language-css">数据类型 &amp; 别名 = 原名</code></pre>
+<p><strong><font color="red">重点注意</font></strong></p>
+<ol>
+<li>&amp;在此不是求地址运算，而是起标识作用。</li>
+<li>类型标识符是指目标变量的类型。</li>
+<li>必须在声明引用变量时进行初始化。</li>
+<li>引用初始化之后不能改变。</li>
+<li>不能有NULL引用。必须确保引用是和一块合法的存储单元关联。可以建立对数组的引用。</li>
+</ol>
+<p><strong>图示</strong></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/CPP/CPP03.jpg" alt=""></p>
+<h3 id="引用基本语法"><a href="#引用基本语法" class="headerlink" title="引用基本语法"></a>引用基本语法</h3><h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token comment" spellcheck="true">/**
+ * 基本引用语法
+ */</span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-<span class="token macro property">#<span class="token directive keyword">define</span> SUM(x) ((x)*(x))</span>
+<span class="token comment" spellcheck="true">// 1.基本语法,</span>
+<span class="token comment" spellcheck="true">//语法  数据类型  &amp; 别名 = 原名</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">&amp;</span>b <span class="token operator">=</span> a<span class="token punctuation">;</span>
 
-<span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span>
+    b <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 输出a , b的值</span>
+    cout <span class="token operator">&lt;&lt;</span><span class="token string">"a="</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span><span class="token string">"b="</span> <span class="token operator">&lt;&lt;</span> b <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
+    <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>程序运行结果</p>
+<pre class=" language-css"><code class="language-css">a = <span class="token number">100</span>
+b = <span class="token number">100</span></code></pre>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>代码说明</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>i<span class="token operator">*</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//引用必须初始化</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//int &amp;b; error 必须给引初始化</span>
+    <span class="token keyword">int</span> <span class="token operator">&amp;</span>b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//引用一旦初始化后，就不可以引向别的位置</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> c<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//赋值 并不是修改引用指向</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="数组引用"><a href="#数组引用" class="headerlink" title="数组引用"></a>数组引用</h4><p>代码示例</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token comment" spellcheck="true">/**
+ * 基本引用语法
+ */</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 数组引用</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义数组</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 1.直接建立引用</span>
+    <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>pArr<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 遍历数组</span>
+    <span class="token comment" spellcheck="true">/*
+        for (int i = 0; i &lt; 5; ++i) {
+            cout &lt;&lt; pArr[i] &lt;&lt; endl;
+        }
+    */</span>
+
+    <span class="token comment" spellcheck="true">// 2.先定义数组类型,再通过类型。</span>
+    <span class="token keyword">typedef</span> <span class="token keyword">int</span><span class="token punctuation">(</span>array_type<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 数据类型 &amp;别名 = 原名</span>
+    array_type  <span class="token operator">&amp;</span> pArr2 <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 遍历数组</span>
+   <span class="token comment" spellcheck="true">/* for (int i = 0; i &lt; 5; ++i) {
+        cout &lt;&lt; pArr2[i] &lt;&lt; endl;
+    }*/</span>
+
+   <span class="token comment" spellcheck="true">// 3.先定义数组引用类型，再通过类型定义引用</span>
+    <span class="token keyword">typedef</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>array_type1<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    array_type1 pArr3 <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 遍历数组</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 输出数组元素</span>
+        cout <span class="token operator">&lt;&lt;</span> pArr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
+    <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="传递方式"><a href="#传递方式" class="headerlink" title="传递方式"></a>传递方式</h3><h4 id="地址传递"><a href="#地址传递" class="headerlink" title="地址传递"></a>地址传递</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">Swap</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>a<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">*</span>b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token operator">*</span>a<span class="token punctuation">;</span>
+    <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+    <span class="token operator">*</span>b <span class="token operator">=</span> temp<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">class</span> <span class="token class-name">CStu</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//inline</span>
-    <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token function">Swap</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a = "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"b = "</span> <span class="token operator">&lt;&lt;</span> b <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">Swap01</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">&amp;</span>a <span class="token punctuation">,</span><span class="token keyword">int</span> <span class="token operator">&amp;</span>b <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-    <span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token function">Swap01</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a = "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20 </span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"b = "</span> <span class="token operator">&lt;&lt;</span> b <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 10</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>注意</strong>:</p>
+<p>1、引用必须引合法的内存空间。</p>
+<p>2、不要返回局部变量的引用。</p>
+<p>3、当函数返回值是引用时候，那么函数的调用可以作为左值存在。</p>
+<h3 id="引用的本质"><a href="#引用的本质" class="headerlink" title="引用的本质"></a>引用的本质</h3><p>引用的本质在c++内部实现是一个指针常量。</p>
+<p>代码示例</p>
+<pre class=" language-cpp"><code class="language-cpp">Type<span class="token operator">&amp;</span> ref <span class="token operator">=</span> val<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Type* const ref = &amp;val</span></code></pre>
+<p><strong>注意</strong></p>
+<pre class=" language-css"><code class="language-css">c++编译器在编译过程中使用常指针作为引用的内部实现，因此引用所占用的空间大小与指针相同，只是这个过程是编译器内部实现，用户不可见。</code></pre>
+<h4 id="指针的引用"><a href="#指针的引用" class="headerlink" title="指针的引用"></a>指针的引用</h4><p>代码示例</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token comment" spellcheck="true">/**
+ * 指针的引用
+ */</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-    <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//inline</span>
-    <span class="token punctuation">{</span>
-
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 定义Person结构体类型</span>
+<span class="token keyword">struct</span> Person<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 姓名</span>
+    string name<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 年龄</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">inline</span> <span class="token keyword">void</span> CStu<span class="token operator">::</span><span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-
+<span class="token comment" spellcheck="true">// 传统方法</span>
+<span class="token keyword">void</span> <span class="token function">mallocMethod</span><span class="token punctuation">(</span>Person <span class="token operator">*</span><span class="token operator">*</span> person<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 分配内存空间</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">(</span>Person <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token operator">-</span><span class="token operator">></span>age <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+    p<span class="token operator">-</span><span class="token operator">></span>name <span class="token operator">=</span> <span class="token string">"Curry"</span><span class="token punctuation">;</span>
+    <span class="token operator">*</span>person <span class="token operator">=</span> p<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment" spellcheck="true">// 调用函数</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 初始化</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token function">mallocMethod</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 输出结果</span>
+    <span class="token comment" spellcheck="true">// cout &lt;&lt; "姓名是:"&lt;&lt; p->name &lt;&lt;endl &lt;&lt; "年龄是:"&lt;&lt; p->age &lt;&lt; endl;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"p的年龄： "</span> <span class="token operator">&lt;&lt;</span> p<span class="token operator">-</span><span class="token operator">></span>age <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"p的姓名： "</span> <span class="token operator">&lt;&lt;</span> p<span class="token operator">-</span><span class="token operator">></span>name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token function">SUM</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">fun</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 指针引用</span>
+<span class="token keyword">void</span> <span class="token function">mallocMethods</span><span class="token punctuation">(</span>Person <span class="token operator">*</span> <span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 分配内存空间</span>
+    p <span class="token operator">=</span> <span class="token punctuation">(</span>Person <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token operator">-</span><span class="token operator">></span>age <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+    p<span class="token operator">-</span><span class="token operator">></span>name <span class="token operator">=</span> <span class="token string">"kobe"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
+<span class="token comment" spellcheck="true">// 释放方法</span>
+<span class="token keyword">void</span> <span class="token function">freeMethods</span><span class="token punctuation">(</span>Person <span class="token operator">*</span> <span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 调用函数</span>
+<span class="token keyword">void</span> <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 初始化</span>
+    Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token function">mallocMethods</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 输出结果</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"p的年龄： "</span> <span class="token operator">&lt;&lt;</span> p<span class="token operator">-</span><span class="token operator">></span>age <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"p的姓名： "</span> <span class="token operator">&lt;&lt;</span> p<span class="token operator">-</span><span class="token operator">></span>name <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 调用freeMethods()</span>
+    <span class="token function">freeMethods</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
+    <span class="token comment" spellcheck="true">// test01();</span>
+    <span class="token function">test02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="常量的引用"><a href="#常量的引用" class="headerlink" title="常量的引用"></a>常量的引用</h4><p>特点：</p>
+<pre class=" language-css"><code class="language-css"><span class="token number">1</span>、字面量不能赋给引用，但是可以赋给const引用
+<span class="token number">2</span>、const修饰的引用，不能修改。</code></pre>
+<p>代码示例</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token comment" spellcheck="true">/**
+ * 常量的引用
+ */</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//加const修饰形参，为了防止在代码中误操作，修改数据</span>
+<span class="token keyword">void</span> <span class="token function">constValue</span><span class="token punctuation">(</span> <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 输出a的大小</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a的大小是:"</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+
+<span class="token comment" spellcheck="true">// 声明函数</span>
+<span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义变量</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token function">constValue</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello, World!"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 调用函数</span>
+    <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -589,7 +757,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/15/c/cpp-zhi-nei-lian-han-shu/">http://yoursite.com/2019/12/15/c/cpp-zhi-nei-lian-han-shu/</a>
+                    <a href="http://yoursite.com/2019/01/15/c/c-yin-yong/">http://yoursite.com/2019/01/15/c/c-yin-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -800,31 +968,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/c/cpp-zhi-yi-chang-chu-li/">
+                <a href="/2019/01/15/c/han-shu-de-chong-zai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CPP之异常处理">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="函数的重载">
                         
-                        <span class="card-title">CPP之异常处理</span>
+                        <span class="card-title">函数的重载</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            程序的错误分类
-语法错误:
-
-语法错误在编译和链接阶段就能发现，只有 100% 符合语法规则的代码才能生成可执行程序。语法错误是最容发现、最容易定位、最容易排除的错误，程序员最不需要担心的就是这种错误。
-
-逻辑错误:
-
-是说我们编写的代码思
+                            函数的默认参数C++在声明函数原型的时可为一个或者多个参数指定默认的参数值，当函数调用的时候如果没有指定这个值，编译器会自动用默认值代替。
+代码示例
+#include &lt;iostream>
+/**
+ * 默认参数
+ */
+using 
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
                         </span>
                         <span class="publish-author">
                             
@@ -856,43 +1023,40 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/c/cpp-zhi-kao-bei-gou-zao/">
+                <a href="/2018/12/23/qian-duan/css/css-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CPP之拷贝构造">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS基础">
                         
-                        <span class="card-title">CPP之拷贝构造</span>
+                        <span class="card-title">CSS基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            拷贝构造1-调用时间
-1、新建一个对象，并将其初始化为同类现有对象
+                            CSS样式规则css规则由两部分构成:
+选择器
+声明
 
-#include &lt;iostream>
-using namespace std;
-
-class CStu
-{
-public:
-    CStu(){
-
-    }
+图片说明
+CSS引用写在head标签内：
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>css样式&lt;/title>
 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/CSS/" class="post-category">
+                                    CSS
                                 </a>
                             
                             
@@ -902,8 +1066,8 @@ public:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>

@@ -804,6 +804,7 @@ void 主要作为函数的形参<span class="token punctuation">(</span>让函�
 <span class="token comment" spellcheck="true">//    p3 = &amp;data;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><pre class=" language-c"><code class="language-c">当<span class="token keyword">const</span>出现在<span class="token operator">*</span>号左边时候，指针指向的数据为常量。当<span class="token keyword">const</span>出现在<span class="token operator">*</span>后右边的时候指针本身为常量。</code></pre>
 <h3 id="指针操作注意点"><a href="#指针操作注意点" class="headerlink" title="指针操作注意点"></a>指针操作注意点</h3><pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 不要操作未初始化的指针变量(野指针)</span>
@@ -1072,26 +1073,22 @@ void 主要作为函数的形参<span class="token punctuation">(</span>让函�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
                         
-                        <span class="card-title">C语言之结构体类型</span>
+                        <span class="card-title">C语言之内存管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
+                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
 代码示例
-# include &lt;stdio.h>
-struct Student
-{
-    int age;
-    float score;
-    ch
+例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
+2.传统形式定
                         
                     </div>
                     <div class="publish-info">
