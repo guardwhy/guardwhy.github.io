@@ -340,7 +340,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/4.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
 </script>
 
 
@@ -465,23 +465,26 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
+                    <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
                             
-                            <span class="card-title">C语言之内存管理</span>
+                            <span class="card-title">指针强化</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
-代码示例
-例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
-2.传统形式定
+                                多级指针多级指针案例1# include &lt;stdio.h>
+
+int main(void)
+{
+    int i = 10;
+    int * p = &amp;i;  //p只能存放int类型变量的地址
+    int ** 
                             
                         </div>
                         <div class="publish-info">
@@ -621,26 +624,25 @@ int main() {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
                             
-                            <span class="card-title">指针强化</span>
+                            <span class="card-title">C语言变量属性</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                多级指针多级指针案例1# include &lt;stdio.h>
-
-int main(void)
-{
-    int i = 10;
-    int * p = &amp;i;  //p只能存放int类型变量的地址
-    int ** 
+                                变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
                             
                         </div>
                         <div class="publish-info">
@@ -674,25 +676,22 @@ int main(void)
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
                             
-                            <span class="card-title">C语言变量属性</span>
+                            <span class="card-title">C语言之数组</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
-属性关键字指明变量的特殊意义。
-auto关键字
-auto是C语言中局部变量的默认属性。
-auto表明将被修饰的变量存储于栈上。
-编译器默认所有的局部变量都是a
+                                数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
+元素的类型既可以是int类型，也可以是double类型。
+数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
                             
                         </div>
                         <div class="publish-info">
@@ -785,22 +784,27 @@ int main() {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
                             
-                            <span class="card-title">C语言之数组</span>
+                            <span class="card-title">C语言之结构体类型</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
-元素的类型既可以是int类型，也可以是double类型。
-数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
+                                为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
+代码示例
+# include &lt;stdio.h>
+struct Student
+{
+    int age;
+    float score;
+    ch
                             
                         </div>
                         <div class="publish-info">
@@ -834,27 +838,23 @@ int main() {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
                             
-                            <span class="card-title">C语言之结构体类型</span>
+                            <span class="card-title">C语言之内存管理</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
+                                动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
 代码示例
-# include &lt;stdio.h>
-struct Student
-{
-    int age;
-    float score;
-    ch
+例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
+2.传统形式定
                             
                         </div>
                         <div class="publish-info">

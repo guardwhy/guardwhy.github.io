@@ -921,25 +921,27 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
                         
-                        <span class="card-title">指针强化</span>
+                        <span class="card-title">C语言之指针函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            多级指针多级指针案例1# include &lt;stdio.h>
+                            函数参数普通变量作为函数的参数代码示例
+#include &lt;stdio.h>
+// 声明函数
+void ChangeNumValue(int a) {
+    a = 10000;
+}
+int main() {
 
-int main(void)
-{
-    int i = 10;
-    int * p = &amp;i;  //p只能存放int类型变量的地址
-    int ** 
+    // 定义变
                         
                     </div>
                     <div class="publish-info">
@@ -976,31 +978,21 @@ int main(void)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
                         
-                        <span class="card-title">C语言之指针数组</span>
+                        <span class="card-title">C语言之数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            指针数组
-本质是数组 只是每个元素的类型是指针。
-
-图示
-
-
-代码示例
-#include &lt;stdio.h>
-
-int main() {
-    int num1 = 10;
-    int num2 = 20;
-    int nu
+                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
+元素的类型既可以是int类型，也可以是double类型。
+数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
                         
                     </div>
                     <div class="publish-info">
