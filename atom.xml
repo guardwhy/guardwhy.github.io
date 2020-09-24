@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-18T07:01:29.980Z</updated>
+  <updated>2020-09-24T23:48:50.468Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL安装</title>
+    <link href="http://yoursite.com/2020/09/25/mysql/mysql-an-zhuang/"/>
+    <id>http://yoursite.com/2020/09/25/mysql/mysql-an-zhuang/</id>
+    <published>2020-09-24T23:45:33.000Z</published>
+    <updated>2020-09-24T23:48:50.468Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MySQL安装&quot;&gt;&lt;a href=&quot;#MySQL安装&quot; class=&quot;headerlink&quot; title=&quot;MySQL安装&quot;&gt;&lt;/a&gt;MySQL安装&lt;/h2&gt;&lt;h3 id=&quot;1-1-Windows-上安装-MySQL&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>linux之用户管理</title>
@@ -520,33 +547,6 @@
         
         
           &lt;h3 id=&quot;CSS3-圆角&quot;&gt;&lt;a href=&quot;#CSS3-圆角&quot; class=&quot;headerlink&quot; title=&quot;CSS3 圆角&quot;&gt;&lt;/a&gt;CSS3 圆角&lt;/h3&gt;&lt;h4 id=&quot;border-radius-属性&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CSS3" scheme="http://yoursite.com/categories/CSS3/"/>
-    
-    
-      <category term="CSS3" scheme="http://yoursite.com/tags/CSS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS3背景</title>
-    <link href="http://yoursite.com/2019/12/27/qian-duan/css3/css3-bei-jing/"/>
-    <id>http://yoursite.com/2019/12/27/qian-duan/css3/css3-bei-jing/</id>
-    <published>2019-12-27T12:59:29.000Z</published>
-    <updated>2019-12-27T13:04:35.666Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;CSS3-背景图像区域&quot;&gt;&lt;a href=&quot;#CSS3-背景图像区域&quot; class=&quot;headerlink&quot; title=&quot;CSS3 背景图像区域&quot;&gt;&lt;/a&gt;CSS3 背景图像区域&lt;/h3&gt;&lt;h4 id=&quot;background-clip-属性&quot;&gt;&lt;a
         
       
     
