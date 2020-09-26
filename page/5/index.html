@@ -340,7 +340,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/5.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -360,24 +360,27 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-ji-chu/">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言之指针基础">
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
                             
-                            <span class="card-title">C语言之指针基础</span>
+                            <span class="card-title">C语言之结构体类型</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
-地址
-内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
-
-- 内存单元的编号，是一个从
+                                为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
+代码示例
+# include &lt;stdio.h>
+struct Student
+{
+    int age;
+    float score;
+    ch
                             
                         </div>
                         <div class="publish-info">
@@ -411,26 +414,128 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/01/15/c/han-shu-de-chong-zai/">
+                    <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="函数的重载">
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
                             
-                            <span class="card-title">函数的重载</span>
+                            <span class="card-title">指针强化</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                函数的默认参数C++在声明函数原型的时可为一个或者多个参数指定默认的参数值，当函数调用的时候如果没有指定这个值，编译器会自动用默认值代替。
-代码示例
-#include &lt;iostream>
-/**
- * 默认参数
- */
-using 
+                                多级指针多级指针案例1# include &lt;stdio.h>
+
+int main(void)
+{
+    int i = 10;
+    int * p = &amp;i;  //p只能存放int类型变量的地址
+    int ** 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                            <span class="chip bg-color">C语言</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
+                            
+                            <span class="card-title">C语言变量属性</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                            <span class="chip bg-color">C语言</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/15/c/cong-c-dao-c/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="从C到C++">
+                            
+                            <span class="card-title">从C到C++</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                C++的概述C++语言在c语言的基础上添加了面向对象编程和泛型编程的支持。c++继承了c语言高效，简洁，快速和可移植的传统。c++语言融合了3种不同的编程方式:
+c语言代表的过程性语言.
+c++在c语言基础上添加的类代表的面向对象语言.
+c
                             
                         </div>
                         <div class="publish-info">
@@ -464,23 +569,26 @@ using
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/01/15/c/cong-c-dao-c/">
+                    <a href="/2019/01/15/c/han-shu-de-chong-zai/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="从C到C++">
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="函数的重载">
                             
-                            <span class="card-title">从C到C++</span>
+                            <span class="card-title">函数的重载</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                C++的概述C++语言在c语言的基础上添加了面向对象编程和泛型编程的支持。c++继承了c语言高效，简洁，快速和可移植的传统。c++语言融合了3种不同的编程方式:
-c语言代表的过程性语言.
-c++在c语言基础上添加的类代表的面向对象语言.
-c
+                                函数的默认参数C++在声明函数原型的时可为一个或者多个参数指定默认的参数值，当函数调用的时候如果没有指定这个值，编译器会自动用默认值代替。
+代码示例
+#include &lt;iostream>
+/**
+ * 默认参数
+ */
+using 
                             
                         </div>
                         <div class="publish-info">
@@ -752,106 +860,6 @@ CSS引用写在head标签内：
 主要有div、p、h1~h6、ul、ol、li、dl、dt、dd
 
 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/23/qian-duan/css/css-bei-jing-he-lie-biao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="CSS背景和列表">
-                            
-                            <span class="card-title">CSS背景和列表</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                背景背景颜色(background-color)
-设置元素的背景的颜色，background-color: 颜色｜ transparent
-
-注意
-transparent是全透明黑色(black)的速记法，类似rgba(0,0,0,0)这样
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/23/qian-duan/css/he-zi-mo-xing/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="盒子模型">
-                            
-                            <span class="card-title">盒子模型</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                盒子模型概述任何一个网页元素包含由这些属性组成：内容(content)、内边距(padding)、边框(border)、外边距(margin)， 这些属性我们可以用日常生活中的常见事物——盒子作一个比喻来理解，所以叫它盒子模型。
-
-内容（c
                             
                         </div>
                         <div class="publish-info">

@@ -820,22 +820,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
                         
-                        <span class="card-title">C语言之内存管理</span>
+                        <span class="card-title">C语言之结构体类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
+                            为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
 代码示例
-例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
-2.传统形式定
+# include &lt;stdio.h>
+struct Student
+{
+    int age;
+    float score;
+    ch
                         
                     </div>
                     <div class="publish-info">
@@ -872,27 +876,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
                         
-                        <span class="card-title">C语言之指针函数</span>
+                        <span class="card-title">C语言变量属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数参数普通变量作为函数的参数代码示例
-#include &lt;stdio.h>
-// 声明函数
-void ChangeNumValue(int a) {
-    a = 10000;
-}
-int main() {
-
-    // 定义变
+                            变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
                         
                     </div>
                     <div class="publish-info">

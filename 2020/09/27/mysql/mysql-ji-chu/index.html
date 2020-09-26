@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C语言之数组, Java,Vue.js,Linux,Spring,Cpp">
+    <meta name="keywords" content="MySQL基础, Java,Vue.js,Linux,Spring,Cpp">
     <meta name="description" content="专注于技术,热爱生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C语言之数组 | guardwhy</title>
+    <title>MySQL基础 | guardwhy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C语言之数组</h1>
+                    <h1 class="description center-align post-title">MySQL基础</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                <span class="chip bg-color">C语言</span>
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                C语言
+                            <a href="/categories/MySQL/" class="post-category">
+                                MySQL
                             </a>
                         
                     </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-12
+                    2020-09-27
                 </div>
                 
 
@@ -480,157 +480,228 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h3><p>同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。</p>
-<p>元素的类型既可以是int类型，也可以是double类型。</p>
-<h3 id="数组的声明"><a href="#数组的声明" class="headerlink" title="数组的声明"></a>数组的声明</h3><p>数组的声明通过指定的<strong>元素类型，变量名，元素个数</strong>。另外[ ]中的元素个数必须是常量。</p>
-<p>图示：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Array/01.png" alt=""></p>
-<h4 id="数组的特点"><a href="#数组的特点" class="headerlink" title="数组的特点"></a>数组的特点</h4><pre class=" language-css"><code class="language-css">类型相同的元素组成的集合。
-空间连续</code></pre>
-<h4 id="取元素的个数"><a href="#取元素的个数" class="headerlink" title="取元素的个数"></a>取元素的个数</h4><p>数组的总大小=元素的个数 * 每个元素的大小</p>
-<pre class=" language-css"><code class="language-css">数组名arr作为类型时候，数组的总大小 == <span class="token function">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
-每个元素的大小 == <span class="token function">sizeof</span><span class="token punctuation">(</span>arr[<span class="token number">0</span>]<span class="token punctuation">)</span>
-元素的个数 = <span class="token function">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>/<span class="token function">sizeof</span><span class="token punctuation">(</span>arr[<span class="token number">0</span>]<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>代码示例</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+                <h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><h3 id="1-SQL定义："><a href="#1-SQL定义：" class="headerlink" title="1-SQL定义："></a>1-SQL定义：</h3><p>SQL：Structured Query Language 结构化的查询语言，所有关系型数据库通用的语言。用来对数据库和数据进行管理的命令。</p>
+<h3 id="2-SQL语句分类"><a href="#2-SQL语句分类" class="headerlink" title="2-SQL语句分类"></a>2-SQL语句分类</h3><ol>
+<li><p><strong>Data Definition Language(建库建表)</strong></p>
+<p>数据定义语言，简称DDL，用于对库和表的管理</p>
+</li>
+<li><p><strong>Data Manipulation Language(记录增删改)</strong></p>
+<p>数据操纵语言，简称DML，用于对记录的增删改</p>
+</li>
+<li><p><strong>Data Query Language(查询)</strong></p>
+<p>数据查询语言，简称DQL，用于对记录查询操作</p>
+</li>
+<li><p><strong>Data Control Language(用户的管理)</strong></p>
+<p>数据控制语言，简称为DCL，用于对用户的管理和权限的设置</p>
+</li>
+</ol>
+<h3 id="3-DDL-数据库定义语言"><a href="#3-DDL-数据库定义语言" class="headerlink" title="3-DDL:数据库定义语言"></a>3-DDL:数据库定义语言</h3><h4 id="3-1-创建数据库基本语法"><a href="#3-1-创建数据库基本语法" class="headerlink" title="3.1-创建数据库基本语法"></a>3.1-创建数据库基本语法</h4><pre class=" language-mysql"><code class="language-mysql">-- 创建数据库
+CREATE DATABASE db1;
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 定义数组</span>
-    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//元素的个数</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"元素个数:%d\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 判断是否存在，如果不存在则创建数据库db2
+create database if not exists db2;
 
-    <span class="token comment" spellcheck="true">//数组的下标：0~4   arr[0]  arr[1] ...arr[4]</span>
-     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(arr) = %u\n"</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//20</span>
-     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(arr[0]) = %u\n"</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4</span>
+-- 创建数据库并指定字符集为gbk
+create database if not exists db3 character set gbk;</code></pre>
+<h4 id="3-2-查看数据库"><a href="#3-2-查看数据库" class="headerlink" title="3.2-查看数据库"></a>3.2-查看数据库</h4><pre class=" language-mysql"><code class="language-mysql">-- 查看数据库
+SHOW DATABASES;
+-- 查看某个数据库的信息
+SHOW CREATE DATABASE db3;</code></pre>
+<h4 id="3-3-修改数据库"><a href="#3-3-修改数据库" class="headerlink" title="3.3-修改数据库"></a>3.3-修改数据库</h4><pre class=" language-mysql"><code class="language-mysql">-- 修改数据库
+ALTER DATABASE db3 CHARACTER SET utf8;
+-- 查看某个数据库的信息
+SHOW CREATE DATABASE db3;</code></pre>
+<h4 id="3-4-删除数据库"><a href="#3-4-删除数据库" class="headerlink" title="3.4-删除数据库"></a>3.4-删除数据库</h4><pre class=" language-mysql"><code class="language-mysql">-- 创建db2数据库
+CREATE DATABASE if not exists db2;
+-- 删除db2数据库
+DROP DATABASE db2;
+-- 查看数据库
+SHOW DATABASES;</code></pre>
+<h4 id="3-5-使用当前数据库"><a href="#3-5-使用当前数据库" class="headerlink" title="3.5-使用当前数据库"></a>3.5-使用当前数据库</h4><pre class=" language-mysql"><code class="language-mysql">-- 查看正在使用的数据库
+SELECT    DATABASE();
+-- 使用db3数据库
+USE    db3;</code></pre>
+<h4 id="3-6-创建表结构"><a href="#3-6-创建表结构" class="headerlink" title="3.6-创建表结构"></a>3.6-创建表结构</h4><p><strong>基本语法</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">-- 字段名就是列名，字段类型：数据类型，约束。多个字段之间使用逗号来分隔
+create table 表名 (
+   字段名1 字段类型1 约束1,
+   字段名2 字段类型2 约束2
+)</code></pre>
+<p><strong>MySQL数据类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>整型</td>
+<td>int或integer</td>
+</tr>
+<tr>
+<td>浮点型</td>
+<td>double或float</td>
+</tr>
+<tr>
+<td>字符串型</td>
+<td>varchar或char</td>
+</tr>
+<tr>
+<td>日期类型</td>
+<td>date或datetime</td>
+</tr>
+</tbody></table>
+<p>图示:</p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/9-MySQL.png" alt=""></p>
+<h5 id="3-6-1-创建表结构"><a href="#3-6-1-创建表结构" class="headerlink" title="3.6.1-创建表结构"></a>3.6.1-创建表结构</h5><pre class=" language-mysql"><code class="language-mysql">-- 创建数据库test1
+create database if not exists test1;
 
-     <span class="token comment" spellcheck="true">// 2.遍历数组</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h4><p>初始化全部元素</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 数组初始化</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> b<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>初始化部分元素</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">int a<span class="token attribute">[10]</span> = </span><span class="token punctuation">{</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">}</span></code></pre>
-<p>定义的时候不加元素个数</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">int a[] = </span><span class="token punctuation">{</span><span class="token number">1</span>,<span class="token number">2</span>,<span class="token number">3</span>,<span class="token number">4</span>,<span class="token number">5</span>,<span class="token number">6</span><span class="token punctuation">}</span></code></pre>
-<p><strong>注意</strong>：</p>
-<ul>
-<li>数组一定要初始化。</li>
-<li>最终数组的元素个数由初始化的数据个数决定。</li>
-</ul>
-<h3 id="元素访问"><a href="#元素访问" class="headerlink" title="元素访问"></a>元素访问</h3><h4 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h4><p>代码示例</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+-- 使用数据库test1
+use test1;
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 1.数组初始化</span>
-    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 2.元素的个数</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"n = %d\n"</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 创建student表包含id整数,name变长字符串长20,sex性别定长型1,birthday字段日期类型
+create table student(
+    -- 字段名,字段类型
+    id int,
+    name VARCHAR(20),
+    sex char(1),
+    birthday date
+);</code></pre>
+<h5 id="3-6-2-查看表结构"><a href="#3-6-2-查看表结构" class="headerlink" title="3.6.2-查看表结构"></a>3.6.2-查看表结构</h5><pre class=" language-mysql"><code class="language-mysql">-- 查看数据库的所有表
+SHOW TABLES;
 
-    <span class="token comment" spellcheck="true">// 遍历数组</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 查看某个表结构
+DESC student;
 
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="一维数组案例"><a href="#一维数组案例" class="headerlink" title="一维数组案例"></a>一维数组案例</h4><p>定义数组，获取键盘录入，求出数组的平均值 最大 最小 值</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+-- 查看创建表的SQL语句 
+SHOW CREATE TABLE student;
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 定义数组</span>
-    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 元素的个数</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 创建相同的表结构
+CREATE TABLE stu1 LIKE student;
 
-    <span class="token comment" spellcheck="true">//获取键盘输入</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入%d个整数\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+-- 查看stu1表结构
+DESC stu1;</code></pre>
+<h5 id="3-6-3-删除表结构"><a href="#3-6-3-删除表结构" class="headerlink" title="3.6.3-删除表结构"></a>3.6.3-删除表结构</h5><pre class=" language-mysql"><code class="language-mysql">-- 使用test1数据库
+use test1
+-- 显示数据库中所有表
+show tables;
 
-    <span class="token comment" spellcheck="true">//求平均值</span>
-    <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//累加每个元素的值</span>
-        sum <span class="token operator">+</span><span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"arr数组的平均值:%d\n"</span><span class="token punctuation">,</span> sum<span class="token operator">/</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 创建数据表
+create table stu2(
+    -- 字段名,字段类型
+    id int,
+    name VARCHAR(20),
+    sex char(1)
+);
 
-    <span class="token comment" spellcheck="true">//求最大值</span>
-    <span class="token keyword">int</span> max <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>max <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            max <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"max= %d\n"</span><span class="token punctuation">,</span> max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 直接删除表
+DROP TABLE stu1;
 
+-- 判断表是否存在并且删除stu2
+DROP TABLE    if EXISTS stu2;</code></pre>
+<h5 id="3-6-4-修改表结构"><a href="#3-6-4-修改表结构" class="headerlink" title="3.6.4-修改表结构"></a>3.6.4-修改表结构</h5><p><strong>添加表列ADD</strong></p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">alter</span> <span class="token attr-value">table 表名 add 字段名 数据类型</span></code></pre>
+<p><strong>修改列类型MODIFY</strong></p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">alter</span> <span class="token attr-value">table 表名 modify 字段名 新的数据类型</span></code></pre>
+<p><strong>修改列名和类型 CHANGE</strong></p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">alter</span> <span class="token attr-value">table 表名 change 旧列名 新列名 数据类型;</span></code></pre>
+<p><strong>删除列 DROP</strong></p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">alter</span> <span class="token attr-value">table 表名 drop 列名;</span></code></pre>
+<p><strong>修改表名</strong></p>
+<p>注：MySQL中没有直接修改库名的语句</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">rename</span> <span class="token attr-value">table 旧表名 to 新的表名;</span></code></pre>
+<p><strong>案列语句</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">-- 查看student的结构
+DESC student;
 
-    <span class="token comment" spellcheck="true">//求最小值</span>
-    <span class="token keyword">int</span> min <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>min <span class="token operator">></span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            min <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"min= %d\n"</span><span class="token punctuation">,</span> min<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="元素互换"><a href="#元素互换" class="headerlink" title="元素互换"></a>元素互换</h4><p>一位数值数组 逆置 （前后元素交换位置）</p>
-<p>图示</p>
-<img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Array/02.png" style="zoom: 67%;">
+-- 为学生表添加一个新的字段remark,类型为char(20)
+ALTER TABLE    student ADD    remark CHAR(20);
 
-<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+-- 将student表中的remark字段的改成varchar(100)
+ALTER TABLE student MODIFY remark VARCHAR(100);
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+-- 将student表中的remark字段名改成intro，类型varchar(30)
+ALTER TABLE    student CHANGE remark intro VARCHAR(30);
 
-    <span class="token comment" spellcheck="true">//获取键盘输入</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入%d个int数据:\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+-- 删除student表中的字段intro
+alter TABLE student DROP intro;
 
-    <span class="token comment" spellcheck="true">//交换</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> n<span class="token number">-1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">,</span> j<span class="token operator">--</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> tmp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        tmp  <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+-- 将学生表student改成student2
+RENAME TABLE student to student2;
 
-    <span class="token comment" spellcheck="true">//遍历</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+-- 查看所有test01的数据表
+SHOW TABLES;</code></pre>
+<h3 id="4-DML-数据库操纵语言"><a href="#4-DML-数据库操纵语言" class="headerlink" title="4-DML:数据库操纵语言"></a>4-DML:数据库操纵语言</h3><h4 id="4-1-插入记录"><a href="#4-1-插入记录" class="headerlink" title="4.1-插入记录"></a>4.1-插入记录</h4><h5 id="4-1-1-插入全部字段"><a href="#4-1-1-插入全部字段" class="headerlink" title="4.1.1-插入全部字段"></a>4.1.1-插入全部字段</h5><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">insert</span> <span class="token attr-value">into 表名 values(值1， 值2.....)</span></code></pre>
+<h5 id="4-1-2-插入部分字段"><a href="#4-1-2-插入部分字段" class="headerlink" title="4.1.2-插入部分字段"></a>4.1.2-插入部分字段</h5><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">insert</span> <span class="token attr-value">into 表名(列名1， 列名2) values(值1，值2);</span></code></pre>
+<p>注：没有添加数据的字段值为NULL</p>
+<h5 id="4-1-3-插入多条记录"><a href="#4-1-3-插入多条记录" class="headerlink" title="4.1.3-插入多条记录"></a>4.1.3-插入多条记录</h5><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">insert</span> <span class="token attr-value">into 表名 values(值1，值2)，(值1，值2)，(值1，值2)</span></code></pre>
+<p><strong>案列语句</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">-- 查询表中的记录
+SELECT * from student;
+
+-- 向表中插入所有字段
+INSERT INTO student VALUES(1, 'curry', '男','1988-3-14');
+-- now() 函数表示现在的时间：同时包含日期和时间
+INSERT INTO student VALUES(2, 'James', '男', now());
+
+-- 插入部分数据，往学生表中添加id, name数据
+INSERT INTO student(id, name) VALUES(3, 'Rondo');
+delete from student where id=4;
+
+-- 一条insert语句插入多条记录
+INSERT INTO    student VALUES (4, "guardwhy", "男","1993-6-19"), (5, "邓肯", "男","1976-4-25"),(6, "kobe", "男","1978-8-23");</code></pre>
+<h4 id="4-2-更新表记录"><a href="#4-2-更新表记录" class="headerlink" title="4.2-更新表记录"></a>4.2-更新表记录</h4><h5 id="4-2-1-不带条件修改数据"><a href="#4-2-1-不带条件修改数据" class="headerlink" title="4.2.1-不带条件修改数据"></a>4.2.1-不带条件修改数据</h5><p>修改所有行的记录</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">update</span> <span class="token attr-value">表名 set 字段名 = 值</span></code></pre>
+<h5 id="4-2-2-带条件修改数据"><a href="#4-2-2-带条件修改数据" class="headerlink" title="4.2.2-带条件修改数据"></a>4.2.2-带条件修改数据</h5><p>修改符合条件的数据</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">update</span> <span class="token attr-value">表名 set 字段名 = 值 where 条件</span></code></pre>
+<p><strong>案列语句</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">-- 查询表中的记录
+SELECT * from stu2;
+
+-- 为学生表添加一个新的字段birthday,类型为date
+ALTER TABLE    stu2 ADD birthday date;
+
+-- 插入数据
+INSERT INTO    stu2 VALUES (1, "小刘", "男","1993-6-30"), (2, "李红", "女","1976-4-11"),(3, "小李", "男","1998-8-13");
+
+-- 不带条件修改数据，将所有的性别改成女
+UPDATE stu2 set sex = '女';
+
+-- 带条件修改数据，将id号为2的学生性别改成男
+UPDATE stu2 set sex= "男" where id = 2;
+
+-- 一次修改多个列，把id为3的学生，修改性别为男，生日：1996-03-18
+UPDATE stu2 set sex = "男", birthday = "1996-03-18" WHERE id = 3;</code></pre>
+<h4 id="4-3-删除表记录"><a href="#4-3-删除表记录" class="headerlink" title="4.3-删除表记录"></a>4.3-删除表记录</h4><h5 id="4-3-1-不带条件删除数据"><a href="#4-3-1-不带条件删除数据" class="headerlink" title="4.3.1-不带条件删除数据"></a>4.3.1-不带条件删除数据</h5><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">--</span> <span class="token attr-value">删除表中所有的记录.</span>
+<span class="token attr-name">delete</span> <span class="token attr-value">from 表名;</span></code></pre>
+<h5 id="4-3-2-带条件删除数据"><a href="#4-3-2-带条件删除数据" class="headerlink" title="4.3.2-带条件删除数据"></a>4.3.2-带条件删除数据</h5><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">--</span> <span class="token attr-value">删除符合条件的记录</span>
+<span class="token attr-name">delete</span> <span class="token attr-value">from 表名 where 条件</span></code></pre>
+<h5 id="4-3-3-删除表中所有记录"><a href="#4-3-3-删除表中所有记录" class="headerlink" title="4.3.3-删除表中所有记录"></a>4.3.3-删除表中所有记录</h5><pre class=" language-mysql"><code class="language-mysql">-- 与前两条语法的区别:相当于先删除表结构:drop table 表名; 然后在创建一张相同结构的表:create table 表名;
+truncate 表名;</code></pre>
+<p><strong>案列语句</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">use test1;
+
+-- 查看表结构
+SHOW TABLES;
+
+-- 查看stu2表结构
+select * from stu2;
+
+-- 带条件删除数据，删除id为3的记录
+DELETE from stu2 WHERE id = 3;
+
+-- 不要带条件删除数据,删除表中的所有数据
+DELETE from stu2;
+
+-- 查看stu2表结构
+SELECT * FROM stu2;
+
+-- 插入多条记录
+INSERT INTO    stu2 VALUES (1, "guardwhy", "男","1993-6-19"), (2, "邓肯", "男","1976-4-25"),(3, "kobe", "男","1978-8-23");
+
+-- 删除表结构再创建表
+truncate stu2;</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -674,7 +745,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">http://yoursite.com/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/</a>
+                    <a href="http://yoursite.com/2020/09/27/mysql/mysql-ji-chu/">http://yoursite.com/2020/09/27/mysql/mysql-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,8 +783,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                    <span class="chip bg-color">C语言</span>
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
                                 </a>
                             
                         </div>
@@ -885,43 +956,37 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
+                <a href="/2020/09/27/mysql/mysql-cha-xun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="MySQL查询">
                         
-                        <span class="card-title">C语言之指针数组</span>
+                        <span class="card-title">MySQL查询</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            指针数组
-本质是数组 只是每个元素的类型是指针。
+                            DQL:数据库查询语言1-简单查询(无条件查询)1.1-查询所有的数据select * from 表名;
+1.2-查询指定的多个列select 列名1，列名2 from 表名;
+案列语句
+-- 使用数据库
+USE test1;
 
-图示
-
-
-代码示例
-#include &lt;stdio.h>
-
-int main() {
-    int num1 = 10;
-    int num2 = 20;
-    int nu
+-- 查询
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
@@ -931,8 +996,8 @@ int main() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>
@@ -946,34 +1011,34 @@ int main() {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
+                <a href="/2020/09/25/mysql/mysql-an-zhuang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
                         
-                        <span class="card-title">C语言之内存管理</span>
+                        <span class="card-title">MySQL安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
-代码示例
-例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
-2.传统形式定
+                            MySQL安装1.1-Windows 上安装 MySQL1、进入官方下载地址下载安装MySQL5.7版本:：https://dev.mysql.com/downloads/mysql/
+
+2.选择直接下载
+3.解压安装3.1、将下载完的 z
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
@@ -983,8 +1048,8 @@ int main() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>
