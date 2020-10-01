@@ -589,7 +589,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>程序运行结果</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/CSS/%E6%8C%87%E9%92%8802.jpg" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/CSS/%E6%8C%87%E9%92%8802.jpg" alt></p>
 <h3 id="指针的定义"><a href="#指针的定义" class="headerlink" title="指针的定义"></a>指针的定义</h3><ul>
 <li><p>指针就是地址，地址就是指针。</p>
 </li>
@@ -725,7 +725,7 @@ P = &amp; i：把i的地址赋给p。然后p就指向了i，*p就等于i。其�
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>图示</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8803.jpg" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8803.jpg" alt></p>
 <h4 id="指针变量的跨度"><a href="#指针变量的跨度" class="headerlink" title="指针变量的跨度"></a>指针变量的跨度</h4><p>指针变量的跨度由<strong>指向类型</strong>的大小确定。</p>
 <pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
@@ -747,7 +747,7 @@ P = &amp; i：把i的地址赋给p。然后p就指向了i，*p就等于i。其�
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>图示</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8804.jpg" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8804.jpg" alt></p>
 <h3 id="void修饰指针变量"><a href="#void修饰指针变量" class="headerlink" title="void修饰指针变量"></a>void修饰指针变量</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1124,31 +1124,24 @@ void 主要作为函数的形参<span class="token punctuation">(</span>让函�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
                         
-                        <span class="card-title">C语言之指针数组</span>
+                        <span class="card-title">C语言变量属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            指针数组
-本质是数组 只是每个元素的类型是指针。
-
-图示
-
-
-代码示例
-#include &lt;stdio.h>
-
-int main() {
-    int num1 = 10;
-    int num2 = 20;
-    int nu
+                            变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
                         
                     </div>
                     <div class="publish-info">

@@ -481,10 +481,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><h3 id="1-1-Windows-上安装-MySQL"><a href="#1-1-Windows-上安装-MySQL" class="headerlink" title="1.1-Windows 上安装 MySQL"></a>1.1-Windows 上安装 MySQL</h3><h4 id="1、进入官方下载地址"><a href="#1、进入官方下载地址" class="headerlink" title="1、进入官方下载地址"></a>1、进入官方下载地址</h4><p>下载安装MySQL5.7版本:：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/1-mysql.png" alt=""></p>
-<h4 id="2-选择直接下载"><a href="#2-选择直接下载" class="headerlink" title="2.选择直接下载"></a>2.选择直接下载</h4><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/2-mysql.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/1-mysql.png" alt></p>
+<h4 id="2-选择直接下载"><a href="#2-选择直接下载" class="headerlink" title="2.选择直接下载"></a>2.选择直接下载</h4><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/2-mysql.png" alt></p>
 <h4 id="3-解压安装"><a href="#3-解压安装" class="headerlink" title="3.解压安装"></a>3.解压安装</h4><p>3.1、将下载完的 zip 包解压到相应的目录,这里我将解压后的文件夹放在E:\Develop\MySQL-5.7.30下,解压文件如图所示</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/3-mysql.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/3-mysql.png" alt></p>
 <p>3.2、在该文件夹下创建 my.ini 配置文件，编辑 my.ini 配置以下基本信息：</p>
 <pre class=" language-ini"><code class="language-ini"><span class="token selector">[mysql]</span>
 # 设置mysql客户端默认字符集
@@ -512,21 +512,21 @@
 <pre class=" language-mysql"><code class="language-mysql">E:
 cd E:E:\Develop\MySQL-5.7.30
 初始化数据库: mysqld --initialize --console</code></pre>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/4-MYSQL.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/4-MYSQL.png" alt></p>
 <p>3.4、运行<code>mysqld install</code>，若提示 “Service successfully installed.” 表示安装成功。</p>
 <h4 id="4-修改密码"><a href="#4-修改密码" class="headerlink" title="4.修改密码"></a>4.修改密码</h4><p>4.1、执行<code>net start mysql</code>启动MySQL</p>
 <p>4.2、运行<code>mysql -u root -p</code>后根据提示输入初始密码，回车后即可登录进MySQL。</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/5-MySQL.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/5-MySQL.png" alt></p>
 <p>4.3、修改密码命令的格式为</p>
 <pre class=" language-sql"><code class="language-sql">修改格式:<span class="token keyword">set</span> password <span class="token keyword">for</span> userName<span class="token variable">@localhost</span> <span class="token operator">=</span> password<span class="token punctuation">(</span><span class="token string">'newPassword'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 密码设置为:<span class="token keyword">set</span> password <span class="token keyword">for</span> userName<span class="token variable">@localhost</span> <span class="token operator">=</span> password<span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>输入<code>exit</code>后回车，再运行<code>mysql -u root -p</code>后就可以用新密码登录了。</p>
 <h4 id="5-配置环境变量"><a href="#5-配置环境变量" class="headerlink" title="5.配置环境变量"></a>5.配置环境变量</h4><p>5.1、右键此电脑 &gt;&gt; 高级系统设置 &gt;&gt; 环境变量 ，新建系统变量 MYSQL_HOME，变量值是安装MySQL的根目录：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/6-MySQL.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/6-MySQL.png" alt></p>
 <p>5.2、编辑系统变量 Path &gt;&gt; 新建 &gt;&gt; 将 %MYSQL_HOME%\bin 添加到尾行 &gt;&gt; 确定。</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/7-MySQL.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/7-MySQL.png" alt></p>
 <p>5.3、配置好后，不用进入MySQL安装目录，以管理员身份打开命令行后，就可以直接登录MySQL了</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/8-MySQL.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/MySQL/8-MySQL.png" alt></p>
 <h3 id="2-1-Linux上安装MySQL"><a href="#2-1-Linux上安装MySQL" class="headerlink" title="2.1-Linux上安装MySQL"></a>2.1-Linux上安装MySQL</h3><h4 id="1-linux安装docker"><a href="#1-linux安装docker" class="headerlink" title="1-linux安装docker"></a>1-linux安装docker</h4><p>Linux环境中的Centos7.x以上版本,安装docker虚拟化容器.</p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">（1）yum</span> <span class="token attr-value">包更新到最新：yum update</span>
 

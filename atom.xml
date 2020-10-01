@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-26T18:00:41.001Z</updated>
+  <updated>2020-10-01T17:16:02.735Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库连接技术</title>
+    <link href="http://yoursite.com/2020/10/02/javase/jdbc/shu-ju-ku-lian-jie-ji-zhu/"/>
+    <id>http://yoursite.com/2020/10/02/javase/jdbc/shu-ju-ku-lian-jie-ji-zhu/</id>
+    <published>2020-10-01T17:14:02.000Z</published>
+    <updated>2020-10-01T17:16:02.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数据库连接技术&quot;&gt;&lt;a href=&quot;#数据库连接技术&quot; class=&quot;headerlink&quot; title=&quot;数据库连接技术&quot;&gt;&lt;/a&gt;数据库连接技术&lt;/h2&gt;&lt;h3 id=&quot;1-JDBC概念&quot;&gt;&lt;a href=&quot;#1-JDBC概念&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="javaSE" scheme="http://yoursite.com/categories/javaSE/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL查询</title>
@@ -520,33 +547,6 @@
         
           &lt;h3 id=&quot;属性选择器&quot;&gt;&lt;a href=&quot;#属性选择器&quot; class=&quot;headerlink&quot; title=&quot;属性选择器&quot;&gt;&lt;/a&gt;属性选择器&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;对带有指定属性的HTML
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CSS3" scheme="http://yoursite.com/categories/CSS3/"/>
-    
-    
-      <category term="CSS3" scheme="http://yoursite.com/tags/CSS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS3结构类选择器</title>
-    <link href="http://yoursite.com/2019/12/27/qian-duan/css3/css3-jie-gou-lei-xuan-ze-qi/"/>
-    <id>http://yoursite.com/2019/12/27/qian-duan/css3/css3-jie-gou-lei-xuan-ze-qi/</id>
-    <published>2019-12-27T13:00:28.000Z</published>
-    <updated>2019-12-27T13:05:20.873Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;UI元素状态伪类&quot;&gt;&lt;a href=&quot;#UI元素状态伪类&quot; class=&quot;headerlink&quot; title=&quot;UI元素状态伪类&quot;&gt;&lt;/a&gt;UI元素状态伪类&lt;/h3&gt;&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot;
         
       
     

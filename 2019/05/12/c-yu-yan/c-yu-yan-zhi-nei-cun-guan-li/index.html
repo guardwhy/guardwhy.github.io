@@ -548,7 +548,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <h4 id="malloc实现图解"><a href="#malloc实现图解" class="headerlink" title="malloc实现图解"></a>malloc实现图解</h4><p>图示：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8811.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8811.png" alt></p>
 <h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-c"><code class="language-c"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h></span></span>
 
@@ -573,7 +573,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p><strong>图解</strong></p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8812.png" alt=""></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8812.png" alt></p>
 <h3 id="动态一维数组示例"><a href="#动态一维数组示例" class="headerlink" title="动态一维数组示例"></a>动态一维数组示例</h3><h4 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"># <span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h></span></span>
 
@@ -873,21 +873,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-bian-liang-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C语言变量属性">
                         
-                        <span class="card-title">C语言之数组</span>
+                        <span class="card-title">C语言变量属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
-元素的类型既可以是int类型，也可以是double类型。
-数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
+                            变量属性C语言中的变量可以有自己的属性，在定义变量的时候可以加上“属性“关键字。
+属性关键字指明变量的特殊意义。
+auto关键字
+auto是C语言中局部变量的默认属性。
+auto表明将被修饰的变量存储于栈上。
+编译器默认所有的局部变量都是a
                         
                     </div>
                     <div class="publish-info">
@@ -924,27 +927,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
                         
-                        <span class="card-title">C语言之指针函数</span>
+                        <span class="card-title">C语言之指针数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数参数普通变量作为函数的参数代码示例
-#include &lt;stdio.h>
-// 声明函数
-void ChangeNumValue(int a) {
-    a = 10000;
-}
-int main() {
+                            指针数组
+本质是数组 只是每个元素的类型是指针。
 
-    // 定义变
+图示
+
+
+代码示例
+#include &lt;stdio.h>
+
+int main() {
+    int num1 = 10;
+    int num2 = 20;
+    int nu
                         
                     </div>
                     <div class="publish-info">
