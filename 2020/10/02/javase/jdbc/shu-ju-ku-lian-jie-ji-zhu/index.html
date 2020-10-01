@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -488,9 +488,9 @@
 <img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/1-jdbc.png" style="zoom:80%;">
 
 <h3 id="3-JDBC访问数据库"><a href="#3-JDBC访问数据库" class="headerlink" title="3-JDBC访问数据库"></a>3-JDBC访问数据库</h3><h4 id="3-1-创建JDBC工程"><a href="#3-1-创建JDBC工程" class="headerlink" title="3.1-创建JDBC工程"></a>3.1-创建JDBC工程</h4><p>1、创建普通的Java工程.</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/2-jdbc.png" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/2-jdbc.png" alt=""></p>
 <p>2、将普通的Java项目转换成Maven项目</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/3-jdbc.png" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/3-jdbc.png" alt=""></p>
 <p>3、倒入相关依赖</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span>
@@ -525,7 +525,7 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span></code></pre>
 <h4 id="3-2-访问数据库步骤"><a href="#3-2-访问数据库步骤" class="headerlink" title="3.2-访问数据库步骤"></a>3.2-访问数据库步骤</h4><p><strong>图解</strong></p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/4-jdbc.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/4-jdbc.jpg" alt=""></p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">1.</span> <span class="token attr-value">通过DriverManager创建连接对象。</span>
 
 <span class="token attr-name">2.</span> <span class="token attr-value">创建好连接对象以后, 由客户端通过Statement发送SQL语句给MySQL服务器。</span>
@@ -556,7 +556,7 @@
 </tr>
 </tbody></table>
 <p>URL用于标识数据库的位置,通过URL地址告诉JDBC程序连接哪个数据库。URL的正确写法</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/5-jdbc.png" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/5-jdbc.png" alt=""></p>
 <h5 id="4-1-2-URL后面参数的作用"><a href="#4-1-2-URL后面参数的作用" class="headerlink" title="4.1.2-URL后面参数的作用"></a>4.1.2-URL后面参数的作用</h5><p>如：乱码的处理，如果数据库出现乱码，可以指定参数 ?characterEncoding=utf8，表示让数据库以UTF-8编码来处理数据。</p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">jdbc</span><span class="token punctuation">:</span><span class="token attr-value">mysql://localhost:3306/数据库名?characterEncoding=utf8</span></code></pre>
 <p>如果服务器是本地，端口号是默认的3306，可以简写：</p>
@@ -641,7 +641,7 @@
 <td>得到结果集中数据<br>1. 通过列名<br>2.通过列号，从1开始</td>
 </tr>
 </tbody></table>
-<h4 id="4-5-PreparedStatement接口"><a href="#4-5-PreparedStatement接口" class="headerlink" title="4.5-PreparedStatement接口"></a>4.5-PreparedStatement接口</h4><h5 id="4-5-1-执行原理"><a href="#4-5-1-执行原理" class="headerlink" title="4.5.1-执行原理"></a>4.5.1-执行原理</h5><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/6-JDBC.png" alt></p>
+<h4 id="4-5-PreparedStatement接口"><a href="#4-5-PreparedStatement接口" class="headerlink" title="4.5-PreparedStatement接口"></a>4.5-PreparedStatement接口</h4><h5 id="4-5-1-执行原理"><a href="#4-5-1-执行原理" class="headerlink" title="4.5.1-执行原理"></a>4.5.1-执行原理</h5><p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/javaSE/jdbc/6-JDBC.png" alt=""></p>
 <h5 id="4-5-2-对比Statement接口"><a href="#4-5-2-对比Statement接口" class="headerlink" title="4.5.2-对比Statement接口"></a>4.5.2-对比Statement接口</h5><ol>
 <li>有预编译的功能，执行效率更高</li>
 <li>更加安全性，没有SQL语句字符串拼接操作。没有SQL注入的安全隐患。</li>
@@ -1271,8 +1271,8 @@ select * from user;</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -1483,8 +1483,8 @@ select * from user;</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>

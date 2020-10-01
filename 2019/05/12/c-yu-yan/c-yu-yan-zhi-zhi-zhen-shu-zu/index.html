@@ -539,7 +539,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>程序运行结果</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8805.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8805.jpg" alt=""></p>
 <h3 id="一维数组名"><a href="#一维数组名" class="headerlink" title="一维数组名"></a>一维数组名</h3><p>一维数组名是个指针常量，他存放的是一维数组第一个元素的地址 。</p>
 <p>代码示例</p>
 <pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
@@ -557,7 +557,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>程序运行结果</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8811.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8811.jpg" alt=""></p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
 <li><p>一维数组名是个<strong>指针常量</strong>。</p>
 </li>
@@ -615,7 +615,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>程序运行结果</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8806.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8806.jpg" alt=""></p>
 <h4 id="案例说明"><a href="#案例说明" class="headerlink" title="案例说明"></a>案例说明</h4><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -967,22 +967,23 @@ q = <span class="token number">6422024</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言之指针基础">
                         
-                        <span class="card-title">C语言之内存管理</span>
+                        <span class="card-title">C语言之指针基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
-代码示例
-例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
-2.传统形式定
+                            内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
+地址
+内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
+
+- 内存单元的编号，是一个从
                         
                     </div>
                     <div class="publish-info">
@@ -1019,26 +1020,27 @@ q = <span class="token number">6422024</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
                         
-                        <span class="card-title">C语言之结构体类型</span>
+                        <span class="card-title">C语言之指针函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
-代码示例
-# include &lt;stdio.h>
-struct Student
-{
-    int age;
-    float score;
-    ch
+                            函数参数普通变量作为函数的参数代码示例
+#include &lt;stdio.h>
+// 声明函数
+void ChangeNumValue(int a) {
+    a = 10000;
+}
+int main() {
+
+    // 定义变
                         
                     </div>
                     <div class="publish-info">

@@ -568,7 +568,7 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>图示：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/31.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/31.jpg" alt=""></p>
 <h4 id="extern关键字"><a href="#extern关键字" class="headerlink" title="extern关键字"></a>extern关键字</h4><p>extern用于声明“<strong>外部</strong>”定义的变量和函数。</p>
 <ul>
 <li>extern变量在文件的其他地方分配空间。</li>
@@ -921,23 +921,22 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-ji-chu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言之指针基础">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
                         
-                        <span class="card-title">C语言之指针基础</span>
+                        <span class="card-title">C语言之内存管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
-地址
-内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
-
-- 内存单元的编号，是一个从
+                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
+代码示例
+例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
+2.传统形式定
                         
                     </div>
                     <div class="publish-info">
@@ -974,22 +973,23 @@ static修饰的函数作用域只是声明的文件中。</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-nei-cun-guan-li/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之内存管理">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言之指针基础">
                         
-                        <span class="card-title">C语言之内存管理</span>
+                        <span class="card-title">C语言之指针基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            动态内存分配传统数组的缺点 1.数组长度必须事先指定，而且只能是常整数，不能是变量。
-代码示例
-例子int a[5];     //必须事先指定，而且只能是常整数int len = 5; int a[len];//error
-2.传统形式定
+                            内存的存储1、是以一个字节为一个编号，也就是8位合在一起给一个编号，不是0,1就给编号。内存分为很多个单元，每个单元就会分配一个编号。
+地址
+内存单元的一个编号。而指针和地址一个概念的。也就是说指针就是地址。
+
+- 内存单元的编号，是一个从
                         
                     </div>
                     <div class="publish-info">

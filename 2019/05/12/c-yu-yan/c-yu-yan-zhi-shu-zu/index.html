@@ -484,7 +484,7 @@
 <p>元素的类型既可以是int类型，也可以是double类型。</p>
 <h3 id="数组的声明"><a href="#数组的声明" class="headerlink" title="数组的声明"></a>数组的声明</h3><p>数组的声明通过指定的<strong>元素类型，变量名，元素个数</strong>。另外[ ]中的元素个数必须是常量。</p>
 <p>图示：</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Array/01.png" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Array/01.png" alt=""></p>
 <h4 id="数组的特点"><a href="#数组的特点" class="headerlink" title="数组的特点"></a>数组的特点</h4><pre class=" language-css"><code class="language-css">类型相同的元素组成的集合。
 空间连续</code></pre>
 <h4 id="取元素的个数"><a href="#取元素的个数" class="headerlink" title="取元素的个数"></a>取元素的个数</h4><p>数组的总大小=元素的个数 * 每个元素的大小</p>
@@ -885,25 +885,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-jie-gou-ti-lei-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言之结构体类型">
                         
-                        <span class="card-title">指针强化</span>
+                        <span class="card-title">C语言之结构体类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            多级指针多级指针案例1# include &lt;stdio.h>
-
-int main(void)
+                            为什么需要结构体为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。 
+代码示例
+# include &lt;stdio.h>
+struct Student
 {
-    int i = 10;
-    int * p = &amp;i;  //p只能存放int类型变量的地址
-    int ** 
+    int age;
+    float score;
+    ch
                         
                     </div>
                     <div class="publish-info">
@@ -940,39 +941,35 @@ int main(void)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-han-shu/">
+                <a href="/2019/01/15/c/c-yin-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言之指针函数">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C++引用">
                         
-                        <span class="card-title">C语言之指针函数</span>
+                        <span class="card-title">C++引用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数参数普通变量作为函数的参数代码示例
-#include &lt;stdio.h>
-// 声明函数
-void ChangeNumValue(int a) {
-    a = 10000;
-}
-int main() {
+                            引用引用的特点引用是c++对c的重要扩充。在c/c++中指针的作用基本都是一样的，但是c++增加了另外一种给函数传递地址的途径，这就是按引用传递。
 
-    // 定义变
+变量名实质上是一段连续内存空间的别名，是一个标号。
+程序中通过变量来申请并命名内存空间
+通
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -982,8 +979,8 @@ int main() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>

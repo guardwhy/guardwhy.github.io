@@ -496,7 +496,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>图示</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8809.png" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8809.png" alt=""></p>
 <p>程序运行结果</p>
 <pre class=" language-css"><code class="language-css">num = <span class="token number">10</span></code></pre>
 <h4 id="指针变量作为函数的形参"><a href="#指针变量作为函数的形参" class="headerlink" title="指针变量作为函数的形参"></a>指针变量作为函数的形参</h4><p>代码示例</p>
@@ -520,7 +520,7 @@
 <p>程序运行结果</p>
 <pre class=" language-css"><code class="language-css">num = <span class="token number">10000</span></code></pre>
 <p>图示</p>
-<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8810.jpg" alt></p>
+<p><img src="https://guardwhy.oss-cn-beijing.aliyuncs.com/img/C/Point/%E6%8C%87%E9%92%8810.jpg" alt=""></p>
 <p><strong>重点</strong>：</p>
 <pre class=" language-css"><code class="language-css">如果想在函数内部修改外部变量的值，请传外部变量的地址。</code></pre>
 <h4 id="经典案例"><a href="#经典案例" class="headerlink" title="经典案例"></a>经典案例</h4><p><strong>互换数字</strong></p>
@@ -960,21 +960,31 @@ max = <span class="token number">44</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-shu-zu/">
+                <a href="/2019/05/12/c-yu-yan/c-yu-yan-zhi-zhi-zhen-shu-zu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C语言之数组">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C语言之指针数组">
                         
-                        <span class="card-title">C语言之数组</span>
+                        <span class="card-title">C语言之指针数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数组定义同一类型的变量——元素(element)集中在一起,在内存上排列成一条直线，这就是数组。
-元素的类型既可以是int类型，也可以是double类型。
-数组的声明数组的声明通过指定的元素类型，变量名，元素个数。另外[ ]中的元素个数必须
+                            指针数组
+本质是数组 只是每个元素的类型是指针。
+
+图示
+
+
+代码示例
+#include &lt;stdio.h>
+
+int main() {
+    int num1 = 10;
+    int num2 = 20;
+    int nu
                         
                     </div>
                     <div class="publish-info">
@@ -1011,35 +1021,37 @@ max = <span class="token number">44</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/15/c/c-yin-yong/">
+                <a href="/2019/05/12/c-yu-yan/zhi-zhen-qiang-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C++引用">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="指针强化">
                         
-                        <span class="card-title">C++引用</span>
+                        <span class="card-title">指针强化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            引用引用的特点引用是c++对c的重要扩充。在c/c++中指针的作用基本都是一样的，但是c++增加了另外一种给函数传递地址的途径，这就是按引用传递。
+                            多级指针多级指针案例1# include &lt;stdio.h>
 
-变量名实质上是一段连续内存空间的别名，是一个标号。
-程序中通过变量来申请并命名内存空间
-通
+int main(void)
+{
+    int i = 10;
+    int * p = &amp;i;  //p只能存放int类型变量的地址
+    int ** 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    C语言
                                 </a>
                             
                             
@@ -1049,8 +1061,8 @@ max = <span class="token number">44</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
                 </div>

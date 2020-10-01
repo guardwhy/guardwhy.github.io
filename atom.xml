@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-01T17:16:02.735Z</updated>
+  <updated>2020-10-01T17:18:37.453Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/10/02/javase/jdbc/shu-ju-ku-lian-jie-ji-zhu/"/>
     <id>http://yoursite.com/2020/10/02/javase/jdbc/shu-ju-ku-lian-jie-ji-zhu/</id>
     <published>2020-10-01T17:14:02.000Z</published>
-    <updated>2020-10-01T17:16:02.735Z</updated>
+    <updated>2020-10-01T17:18:37.453Z</updated>
     
     <summary type="html">
     
@@ -39,7 +39,7 @@
       <category term="javaSE" scheme="http://yoursite.com/categories/javaSE/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
